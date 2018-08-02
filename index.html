@@ -25,12 +25,13 @@
                     $(this).addClass('loading');
                 });
                 $('#video_id').on('canplay', function (event) {
-                    var delayInMilliseconds = 20000; //7 second
+                    var delayInMilliseconds = 7000; //7 second
+                    
+                    $(this).attr('poster', '');
                     setTimeout(function () {
                         
                     }, delayInMilliseconds);
                     $(this).removeClass('loading');
-                    $(this).attr('poster', '');
                     
                 });
             </script>

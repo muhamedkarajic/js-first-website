@@ -19,12 +19,12 @@
     <header class="v-header container">
 
         <div class="fullscreen-video-wrap">
-            <video id="video" src="codehigh.mov" autoplay="true" loop="true" muted="muted" volume="0" preload="auto"></video>
+            <video id="video_id" src="codehigh.mov" autoplay="true" loop="true" muted="muted" volume="0" preload="auto"></video>
             <script>
                 $('#video_id').on('loadstart', function (event) {
                     $(this).addClass('loading');
                 });
-                $('#video_id').on("oncanplaythrough", function (event) {                    
+                $('#video_id').on('oncanplaythrough', function (event) {                    
                     $(this).removeClass('loading');
                     $(this).attr('poster', '');
                 });

@@ -19,16 +19,16 @@
     <header class="v-header container">
 
         <div class="fullscreen-video-wrap">
-            <video id="video" src="codehigh.mov" autoplay="true" loop="true" poster="codehigh.gif" muted="muted" volume="0" preload="auto"></video>
-            
-    <script>
-        video.addEventListener('loadedmetadata', function () {
-            if (video.buffered.length === 0) return;
-
-            var bufferedSeconds = video.buffered.end(0) - video.buffered.start(0);
-            console.log(bufferedSeconds + ' seconds of video are ready to play!');
-        });
-    </script>
+            <video id="video" src="codehigh.mov" autoplay="true" loop="true" poster="data:image/gif,AAAA" muted="muted" volume="0" preload="auto"></video>
+            <script>
+                $('#video_id').on('loadstart', function (event) {
+                $(this).addClass('loading');
+              });
+              $('#video_id').on('canplay', function (event) {
+                $(this).removeClass('loading');
+                $(this).attr('poster', '');
+              });
+            </script>
             <div class="header-overlay"></div>
         </div>
 

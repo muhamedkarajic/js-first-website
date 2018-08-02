@@ -72,7 +72,9 @@ h3{
    opacity: .30;
    position: absolute;
 }
-
+video.loading {
+    background: black url(codehigh.gif) center center no-repeat;
+  }
 .box {
     margin: 0 6%;
 }

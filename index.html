@@ -19,7 +19,7 @@
     <header class="v-header container">
 
         <div class="fullscreen-video-wrap">
-            <video id="video" src="codehigh.mov" autoplay="true" loop="true" poster="data:image/gif,AAAA" muted="muted" volume="0" preload="auto"></video>
+            <video id="video" src="codehigh.mov" autoplay="true" loop="true" poster="data:image/gif,AAAA" muted="muted" volume="0" preload="auto" controls></video>
             <script>
                 $('#video_id').on('loadstart', function (event) {
                 $(this).addClass('loading');
@@ -29,7 +29,6 @@
                 $(this).attr('poster', '');
               });
             </script>
-            <div class="header-overlay"></div>
         </div>
 
     </header>

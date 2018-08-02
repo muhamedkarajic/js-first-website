@@ -1,50 +1,52 @@
 @import url(//fonts.googleapis.com/css?family=Open+Sans);
-
 * {
     padding: 0;
     margin: 0;
-    font-family: 'Open Sans', sans-serif; 
+    font-family: 'Open Sans', sans-serif;
 }
 
-body
-{
+::-moz-selection {
+    /* Code for Firefox */
+    color: white;
+    background: #F1693B;
+}
+
+::selection {
+    color: white;
+    background: #F1693B;
+}
+
+body {
     overflow-x: hidden;
 }
 
-h3{
+h3 {
     margin: 30px 0 7px 0;
 }
 
-
-
 .center {
-    text-align: center;  
-    color: white; 
+    text-align: center;
+    color: white;
     padding: 10px;
     background-color: rgba(241, 105, 59, .9);
     position: fixed;
     width: 100%;
 }
 
-
-
-.v-header
-{    
+.v-header {
     height: 100vh;
     width: 100vw;
-    display:flex;
+    display: flex;
     align-items: center;
     color: #fff;
 }
 
-.container
-{
+.container {
     margin: auto;
     text-align: center;
 }
 
-.fullscreen-video-wrap
-{
+.fullscreen-video-wrap {
     top: 0;
     left: 0;
     width: 100%;
@@ -52,29 +54,26 @@ h3{
     overflow: hidden;
 }
 
-.fullscreen-video-wrap img
-{
-    min-width: 100%;
-    min-height: 100%;
-}
-.fullscreen-video-wrap video
-{
+.fullscreen-video-wrap img {
     min-width: 100%;
     min-height: 100%;
 }
 
-.header-overlay{
+.fullscreen-video-wrap video {
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.header-overlay {
     height: 100vh;
     width: 100vw;
     top: 0;
     left: 0;
-   background: #F1693B;
-   opacity: .30;
-   position: absolute;
+    background: #F1693B;
+    opacity: .30;
+    position: absolute;
 }
-video.loading {
-    background: black url(codehigh.gif) center center no-repeat;
-  }
+
 .box {
     margin: 0 6%;
 }
@@ -85,14 +84,15 @@ video.loading {
     text-transform: uppercase;
 }
 
-.box p{
-    color: darkslategray;    
+.box p {
+    color: darkslategray;
 }
-.box ul li
-{
-    list-style-position:inside;
+
+.box ul li {
+    list-style-position: inside;
     list-style-type: square;
 }
+
 .box ul li a {
     color: darkslategray;
     text-transform: capitalize;
@@ -101,120 +101,101 @@ video.loading {
 
 .box ul li a:hover {
     color: #F1693B;
-    
-
 }
-
 
 .row {
     display: flex;
     flex-wrap: wrap;
     padding: 0 4px;
-  }
-  
-  /* Create four equal columns that sits next to each other */
-  .column {
+}
+
+/* Create four equal columns that sits next to each other */
+
+.column {
     flex: calc(25% - 4*4px);
     max-width: calc(25% - 4*4px);
     padding: 0 4px;
-    overflow: hidden;
+}
 
-  }
-  
-  .column img {
+.column img {
     transition: 0.75s;
     border: none;
     margin-top: 8px;
     vertical-align: middle;
     width: 100%;
-    margin: -5px -10px -10px -5px;
-    filter:grayscale(75%) blur(2px);
+    filter: grayscale(90%) blur(1.5px);
+}
 
-  }
-  .column img:hover {
-    transition: transform .3s,  filter .3s; /* Animation */
+.column img:hover {
+    transition: transform .3s, filter .3s;
+    /* Animation */
     transform: scale(1.1);
-    filter:grayscale(0) blur(0);
-
+    filter: grayscale(0) blur(0);
     border: solid 2px rgba(241, 105, 59, .5);
-  }
-  
+}
 
-
-.halfText
-{
-    
+.halfText {
     column-count: 2;
 }
 
-
-halfText p{
+halfText p {
     vertical-align: middle;
-    margin-top: 8px;    
+    margin-top: 8px;
 }
-
-
 
 .columnText {
     float: left;
     width: 50%;
 }
-.columnText p a{
+
+.columnText p a {
     color: #F1693B;
     text-decoration: none;
 }
 
 /* Clear floats after the columns */
+
 .rowText:after {
     content: "";
     display: table;
     clear: both;
 }
 
-
-
-  @media screen and (max-width: 1000px) {
+@media screen and (max-width: 1000px) {
     .column {
-      transition: transform .5s;
-      flex: calc(33% - 4*3px);;
-      max-width: calc(33% - 4*3px);;
+        transition: transform .5s;
+        flex: calc(33% - 4*3px);
+        ;
+        max-width: calc(33% - 4*3px);
+        ;
     }
-    .columnText
-    {
+    .columnText {
         width: 100%;
     }
-    .halfText
-{
-    
-    column-count: 1;
+    .halfText {
+        column-count: 1;
+    }
 }
-  }
 
-  /* Responsive layout - makes a two column-layout instead of four columns */
-  @media screen and (max-width: 800px) {
-      .column {
-      transition: .5s;
-          
-      flex: calc(50% - 4*2px);;
-      max-width: calc(50% - 4*2px);;
+/* Responsive layout - makes a two column-layout instead of four columns */
+
+@media screen and (max-width: 800px) {
+    .column {
+        transition: .5s;
+        flex: calc(50% - 4*2px);
+        ;
+        max-width: calc(50% - 4*2px);
+        ;
     }
-    
-  }
-  
-  /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-  @media screen and (max-width: 600px) {
-      .column {
-      transition: .5s;
-          
-      flex: 100%;
-      max-width: 100%;
-      padding: 0 0;
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 600px) {
+    .column {
+        transition: .5s;
+        flex: 100%;
+        max-width: 100%;
+        padding: 0 0;
     }
-
-   
-  }
-
-
-
-  
-
+}

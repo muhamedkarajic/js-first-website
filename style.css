@@ -52,6 +52,11 @@ h3{
     overflow: hidden;
 }
 
+.fullscreen-video-wrap img
+{
+    min-width: 100%;
+    min-height: 100%;
+}
 .fullscreen-video-wrap video
 {
     min-width: 100%;
@@ -66,7 +71,6 @@ h3{
    background: #F1693B;
    opacity: .30;
    position: absolute;
-
 }
 
 .box {
@@ -111,6 +115,8 @@ h3{
     flex: calc(25% - 4*4px);
     max-width: calc(25% - 4*4px);
     padding: 0 4px;
+    overflow: hidden;
+
   }
   
   .column img {
@@ -119,10 +125,15 @@ h3{
     margin-top: 8px;
     vertical-align: middle;
     width: 100%;
+    margin: -5px -10px -10px -5px;
+    filter:grayscale(75%) blur(2px);
+
   }
   .column img:hover {
-    transition: transform .5s, border .25s; /* Animation */
+    transition: transform .3s,  filter .3s; /* Animation */
     transform: scale(1.1);
+    filter:grayscale(0) blur(0);
+
     border: solid 2px rgba(241, 105, 59, .5);
   }
   

@@ -24,10 +24,12 @@
                 $('#video_id').on('loadstart', function (event) {
                     $(this).addClass('loading');
                 });
-                $('#video_id').on(canplay, function (event) {
+                $('#video_id').on('canplay', function (event) {
+                    var delayInMilliseconds = 20000; //7 second
                     
                     $(this).removeClass('loading');
                     $(this).attr('poster', '');
+                    
                     
                 });
             </script>

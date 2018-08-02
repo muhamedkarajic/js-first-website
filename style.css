@@ -52,6 +52,11 @@ h3{
     overflow: hidden;
 }
 
+.fullscreen-video-wrap img
+{
+    min-width: 100%;
+    min-height: 100%;
+}
 .fullscreen-video-wrap video
 {
     min-width: 100%;
@@ -66,7 +71,6 @@ h3{
    background: #F1693B;
    opacity: .30;
    position: absolute;
-
 }
 
 .box {

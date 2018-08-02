@@ -26,11 +26,11 @@
                 });
                 $('#video_id').on('canplay', function (event) {
                     var delayInMilliseconds = 14000; //7 second
-                    $(this).addClass('loading');
                     setTimeout(function () {
-                        $(this).removeClass('loading');
-                        $(this).attr('poster', '');
+                        
                     }, delayInMilliseconds);
+                    $(this).removeClass('loading');
+                    $(this).attr('poster', '');
                     
                 });
             </script>

@@ -22,12 +22,17 @@
             <video id="video" src="codehigh.mov" autoplay="true" loop="true" poster="codehigh.gif" muted="muted" volume="0" preload="auto"></video>
             <script>
                 $('#video_id').on('loadstart', function (event) {
-                $(this).addClass('loading');
-              });
-              $('#video_id').on('canplay', function (event) {
-                $(this).removeClass('loading');
-                $(this).attr('poster', '');
-              });
+                    $(this).addClass('loading');
+                });
+                $('#video_id').on('canplay', function (event) {
+                    var delayInMilliseconds = 7000; //1 second
+
+                    setTimeout(function () {
+                        $(this).removeClass('loading');
+                        $(this).attr('poster', '');
+                    }, delayInMilliseconds);
+                    
+                });
             </script>
         </div>
 

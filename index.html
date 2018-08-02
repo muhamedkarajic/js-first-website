@@ -21,6 +21,7 @@
         <div class="fullscreen-video-wrap">
             <video id="video_id" src="codehigh.mov" autoplay="true" loop="true" muted="muted" volume="0" preload="auto"></video>
             <script>
+                $('#video_id').css("border", "10px solid red" );
                 $('#video_id').on('loadstart', function (event) {
                     $(this).addClass('loading');
                 });

@@ -123,15 +123,29 @@ h3 {
     margin-top: 8px;
     vertical-align: middle;
     width: 100%;
-    filter: grayscale(90%) blur(1.5px);
+
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+    filter: url(grayscale.svg); /* Firefox 4+ */
+    filter: gray; /* IE 6-9 */
 }
 
 .column img:hover {
     transition: transform .3s, filter .3s;
-    /* Animation */
-    transform: scale(1.1);
-    filter: grayscale(0) blur(0);
     border: solid 2px rgba(241, 105, 59, .5);
+    /* Animation */
+
+    transform: scale(1.1);
+    -webkit-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+    -ms-filter: grayscale(0%);
+    -o-filter: grayscale(0%);
+    filter: grayscale(0%);
+    filter: none; /* Firefox 4+ */
+    
 }
 
 .halfText {

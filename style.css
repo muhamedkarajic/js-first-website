@@ -123,16 +123,24 @@ h3 {
     margin-top: 8px;
     vertical-align: middle;
     width: 100%;
-    
+    -webkit-filter: grayscale(90%) blur(1.5px);
+    -moz-filter: grayscale(90%) blur(1.5px);
+    -ms-filter: grayscale(90%) blur(1.5px);
+    -o-filter: grayscale(90%) blur(1.5px);
     filter: grayscale(90%) blur(1.5px);
+    filter: gray;
 }
 
 .column img:hover {
     transition: transform .3s, filter .3s;
     /* Animation */
     transform: scale(1.1);
-    
-    filter: grayscale(0) blur(0);
+    -webkit-filter: grayscale(0%) blur(0px);
+    -moz-filter: grayscale(0%) blur(0px);
+    -ms-filter: grayscale(0%) blur(0px);
+    -o-filter: grayscale(0%) blur(0px);
+    filter: grayscale(0%) blur(0px);
+    filter: none;
     border: solid 2px rgba(241, 105, 59, .5);
 }
 

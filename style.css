@@ -70,8 +70,21 @@ h3 {
     top: 0;
     left: 0;
     background: #F1693B;
+    background: linear-gradient(-65deg, red, rgb(37, 40, 231), #F1693B);
     opacity: .30;
     position: absolute;
+}
+
+.text-block {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    background-color: black;
+    color: white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
 }
 
 .box {
@@ -155,7 +168,8 @@ halfText p {
 
 .columnText {
     float: left;
-    width: 50%;
+    padding: 0 8px;
+    width: calc(50% - 16px);
 }
 
 .columnText p a {

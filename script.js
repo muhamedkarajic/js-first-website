@@ -11,7 +11,6 @@ window.addEventListener('load', function() {
     var preloader = document.getElementById('overlay');
 
     function checkLoad() {
-        console.log(video.readyState)
         if (video.readyState === 4) {
             preloader.style.display = 'none';
         } else {

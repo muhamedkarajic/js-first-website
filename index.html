@@ -9,30 +9,20 @@
     <title>Za Spark</title>
     <link rel="shortcut icon" href="">
 
-
-
 </head>
 
 <body>
-
-
     <header class="v-header container">
-
         <div class="fullscreen-video-wrap">
             <video id="video_id" src="video.mp4" autoplay="true" loop="true" poster="data:image/gif,AAAA" muted="muted" volume="0" preload="auto"></video>
             <div class="header-overlay"></div>
         </div>
-
     </header>
-
-
-
-
 
     <div class="box">
         <div class="rowText">
             <div class="columnText">
-                <h3>Spark school: </h3>
+                <h3 class="colorray">Spark school: </h3>
                 <p>In cooperation with SPARK, the Hello World Association is branded as SPARK school. SPARK school educates
                     future digital professionals through free-of-charge workshops in programming, mobile app development,
                     operating system, design, and project management. Take a look at
@@ -40,14 +30,14 @@
             </div>
 
             <div class="columnText">
-                <h3>Spark Startup: </h3>
+                <h3 class="colorray">Spark Startup: </h3>
 
                 <p>SPARK startup accelerates startup teams with a great business idea and takes them on an exciting entrepreneurial
                     journey in these industries: Gaming & Sports Data, IoT & Big Data, and Digital Media & E-Commerce.</p>
             </div>
         </div>
 
-        <h3>Sposobnosti: </h3>
+        <h3 class="colorray">Sposobnosti: </h3>
         <div class="row">
             <div class="halfText">
                 <p>SPARK is an advanced digital technology acceleration platform dedicated to regional startups and projects
@@ -60,27 +50,58 @@
 
             </div>
         </div>
-        <h3>Sposobnosti: </h3>
-        <ul>
-            <li>
-                <a href="#">C++</a>
-            </li>
-            <li>
-                <a href="#">HTML</a>
-            </li>
-            <li>
-                <a href="#">CSS</a>
-            </li>
-            <li>
-                <a href="#">Photoshop</a>
-            </li>
-            <li>
-                <a href="#">Illustrator</a>
-            </li>
-            <li>
-                <a href="#">After Effects</a>
-            </li>
-        </ul>
+
+
+        <h3 class="colorray">Sposobnosti: </h3>
+        <ol>
+            <li>Graphic Design: </li>
+            <ul>
+                <li>
+                    <a href="#">Photoshop</a>
+                </li>
+                <li>
+                    <a href="#">Illustrator</a>
+                </li>
+                <li>
+                    <a href="#">Logo Design</a>
+                </li>
+                <li>
+                    <a href="#">Business Cards</a>
+                </li>
+            </ul>
+            <br>
+            <li>Video/Animation: </li>
+            <ul>
+                <li>
+                    <a href="#">After Effects</a>
+                </li>
+                <li>
+                    <a href="#">Premier Pro</a>
+                </li>
+                <li>
+                    <a href="#">Adobe Audition</a>
+                </li>
+                <li>
+                    <a href="#">Motion Graphic</a>
+                </li>
+                <li>
+                    <a href="#">Video Editing</a>
+                </li>
+            </ul>
+            <br>
+            <li>Programming:</li>
+            <ul>
+                <li>
+                    <a href="#">C++</a>
+                </li>
+                <li>
+                    <a href="#">HTML</a>
+                </li>
+                <li>
+                    <a href="#">CSS</a>
+                </li>
+            </ul>
+        </ol>
         <h3>Opis: </h6>
             <p>The SPARK Advisory Board is formed by four high-profile international businessmen (Bijan Khezri, as the Chairman
                 of Advisory Board, Felix Geyr, Maik Käbisch and Dr. Franz-Josef Seidensticker). They will support SPARK in
@@ -141,7 +162,17 @@
 
 
 
+    <script>
+        var colors = ['#F1693B', '#0000ff'];
+        var random_color = colors[Math.floor(Math.random() * colors.length)];
+        var Niz = document.getElementsByClassName('colorray');
 
+        for(var i = 0; i<Niz.length; i++)
+        {
+            Niz[i].style.color = random_color;
+        }
+        
+    </script>
 </body>
 
 </html>

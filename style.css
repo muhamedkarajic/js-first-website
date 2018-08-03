@@ -54,7 +54,7 @@ h3 {
     overflow: hidden;
 }
 
-.fullscreen-video-wrap img {
+.fullscreen-video-wrap iframe {
     min-width: 100%;
     min-height: 100%;
 }

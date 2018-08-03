@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="no-js" lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -15,29 +15,75 @@
     <header class="v-header container">
         <div class="fullscreen-video-wrap">
             <video id="video_id" src="video.mp4" autoplay="true" loop="true" poster="data:image/gif,AAAA" muted="muted" volume="0" preload="auto"></video>
-            <div class="header-overlay"><h3 class="text-block">HELLO WORLD</h3></div>
+            <div class="header-overlay">
+                <h3 class="text-block">HELLO WORLD</h3>
+            </div>
         </div>
+
+
+        <style>
+            /* This only works with JavaScript, 
+               if it's not present, don't show loader */
+
+            .no-js #loader {
+                display: none;
+            }
+
+            .js #loader {
+                display: block;
+                position: absolute;
+                left: 100px;
+                top: 0;
+            }
+        </style>
+
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.min.js"></script>
+
+
+        <script src="https://github.com/Modernizr/Modernizr/raw/master/modernizr.js"></script>
+        <script>
+            // Wait for window load
+            $(window).load(function () {
+                // Animate loader off screen
+                $("#loader").animate({
+                    top: -200
+                }, 1500);
+            });
+        </script>
+
+
     </header>
+
+    <img src="https://cdn2.iconfinder.com/data/icons/picons-basic-2/57/basic2-090_loader_loading-512.png" id="loader">
+	
+	
+	<img src="https://cdn2.iconfinder.com/data/icons/picons-basic-2/57/basic2-090_loader_loading-512.png">
+
+
 
     <div class="box">
         <div class="rowText">
             <div class="columnText">
                 <h3>Vatrogasac ili informaticar: </h3>
-                <p>Bilo jednom davno, jedno odeljenje, nekad su bili prvi razred osnovne skole, u tom odeljenju je bio jedan mali 
-                    djecak koji je htio biti informaticar kad odreaste, ipak nije poznavao ništa o informatici, samo je sanjar bio, i voliio recunare
-                    Jednog dana uciteljica je imala interesantan zadatak za sve ucenike, uzela je papir veliki i redom je ispisala imena i prezimena svih ucenika, 
-                    sa jednom dodatnom kolonom, gdje su trebali da upišu   
+                <p>Bilo jednom davno, jedno odeljenje, nekad su bili prvi razred osnovne skole, u tom odeljenju je bio jedan
+                    mali djecak koji je htio biti informaticar kad odreaste, ipak nije poznavao ništa o informatici, samo
+                    je sanjar bio, i voliio recunare Jednog dana uciteljica je imala interesantan zadatak za sve ucenike,
+                    uzela je papir veliki i redom je ispisala imena i prezimena svih ucenika, sa jednom dodatnom kolonom,
+                    gdje su trebali da upišu
                     <a href="#">šta da u životu žele biti</a>.</p>
             </div>
 
             <div class="columnText">
                 <h3>Spark Startup: </h3>
 
-                <p>Imali su jedan školski sat da razmisle i odluce šta ce napisati, išli su redom, vecina ucenika je napisala vatrogasac ili policajac, neki su napisali doktor. 
-                    Inace su to svi stavili zbog toga što su takve stvari vidjeli na TV-u, nisu imali neki odreden razlog zašto baš to. Medu njima je bio jedan djecak koji je strašno 
-                    volio kompjutere iako nije znao šta da napiše, i nije razmišljao o tome, znao je da želi nešto raditi sa kompjuterima,  htio je stviti sebi visok cilj, nešto da u 
-                    životu postigne visoko, ipak dosta ga je to plašilo što nije imao najbolje ocjene u školi, trudio se al uvijek se zbuni ili prepadne ispita, pa je znao cesto dobiti 
-                    i lošiju ocjenu od one za koju zna,</p>
+                <p>Imali su jedan školski sat da razmisle i odluce šta ce napisati, išli su redom, vecina ucenika je napisala
+                    vatrogasac ili policajac, neki su napisali doktor. Inace su to svi stavili zbog toga što su takve stvari
+                    vidjeli na TV-u, nisu imali neki odreden razlog zašto baš to. Medu njima je bio jedan djecak koji je
+                    strašno volio kompjutere iako nije znao šta da napiše, i nije razmišljao o tome, znao je da želi nešto
+                    raditi sa kompjuterima, htio je stviti sebi visok cilj, nešto da u životu postigne visoko, ipak dosta
+                    ga je to plašilo što nije imao najbolje ocjene u školi, trudio se al uvijek se zbuni ili prepadne ispita,
+                    pa je znao cesto dobiti i lošiju ocjenu od one za koju zna,</p>
             </div>
         </div>
 

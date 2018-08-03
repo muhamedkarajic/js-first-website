@@ -5,6 +5,17 @@
     font-family: 'Open Sans', sans-serif;
 }
 
+
+#overlay {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 2;
+
+}
 .spinner {
     width: 80px;
     height: 80px;
@@ -18,15 +29,6 @@
     right: 0;
     margin: auto;
     animation: spin 1s infinite linear;
-}
-
-#overlay {
-    height: 100%;
-    width: 100%;
-    background-color: white;
-    position: fixed;
-    left: 0;
-    top: 0;
 }
 
 ::-moz-selection {
@@ -97,6 +99,7 @@ h3 {
     background: linear-gradient(-65deg, red, rgb(37, 40, 231), #F1693B);
     opacity: .30;
     position: absolute;
+    z-index: 1;
 }
 
 .text-block {

@@ -58,6 +58,7 @@
     height: 100%;
     width: 100%;
     background-color: white;
+    
     position: fixed;
     left: 0;
     top: 0;
@@ -157,6 +158,7 @@ h3 {
     right: 30px;
     background-color: rgba(0, 0, 0, 0.5);
     color: white;
+    border:  solid 1px white;
     padding-top: 5px;
     padding-bottom: 5px;
     padding-left: 20px;

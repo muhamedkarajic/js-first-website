@@ -25,8 +25,19 @@
     background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/fs/b2829c29329691.55ee1317c58f1.jpg);
     background-blend-mode: luminosity;
     background-color: #1E0C36;
+    filter:grayscale(30%);
+    filter: brightness(.5);
     overflow-y: auto;
     overflow-x: hidden;
+    transition: 0.5s;
+}
+
+.columnView:hover{
+    filter: grayscale(0);
+    filter: brightness(1);
+    transition: 0.5s ;
+    
+
 }
 
 .columnView h2 {
@@ -40,6 +51,7 @@
 .columnView p {
     display: inline-block;
     padding: 4px 7px;
+    
 }
 
 */ #overlay {

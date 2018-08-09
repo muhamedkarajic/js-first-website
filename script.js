@@ -12,6 +12,7 @@ window.addEventListener('load', function() {
 
     function checkLoad() {
         if (video.readyState === 4) {
+            video.play();
             preloader.style.display = 'none';
         } else {
             setTimeout(checkLoad, 100);

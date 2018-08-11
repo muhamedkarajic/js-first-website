@@ -234,6 +234,8 @@ h3 {
     -o-filter: grayscale(90%) blur(1.5px);
     filter: grayscale(90%) blur(1.5px);
     filter: gray;
+    z-index: 0;
+    position: relative;
     
 }
 

@@ -1,12 +1,21 @@
-/*var overlay = document.getElementById("overlay");
+const copyToClipboard = str => {
+    const el = document.createElement('textarea');
+    el.value = "muhamedkarajic";
+    document.body.appendChild(el);
+    el.select();
+    document.execCommand('copy');
+    document.body.removeChild(el);
+
+    const toolTip = document.getElementById('testing');
+    toolTip.style.visibility = "visible";
+    setTimeout(function(){
+        toolTip.style.visibility = "hidden";
+    }, 2000);
+};
+
 
 window.addEventListener('load', function () {
-    overlay.style.display = 'none';
-})
- */
 
-window.addEventListener('load', function() {
-    
     var video = document.getElementById('video');
     var preloader = document.getElementById('overlay');
 

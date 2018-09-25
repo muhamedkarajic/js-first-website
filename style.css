@@ -1,0 +1,640 @@
+@import url(//fonts.googleapis.com/css?family=Open+Sans);
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+
+}
+
+
+.clearFix
+{
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.rowView {
+    margin-top: 30px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.columnView {
+    -moz-box-shadow: inset 0 0 20px #000000;
+    -webkit-box-shadow: inset 0 0 20px #000000;
+    box-shadow: inset 0 0 20px #000000;
+    flex: 25%;
+    max-width: 25%;
+    min-height: 100%;
+    height: 75vh;
+    background-size: cover;
+    text-shadow: 4px 4px 4px black;
+    color: #d190fc;
+    text-align: justify;
+    background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/fs/b2829c29329691.55ee1317c58f1.jpg);
+    background-blend-mode: luminosity;
+    background-color: #1E0C36;
+    filter: grayscale(30%);
+    filter: brightness(.5);
+    overflow-y: hidden;
+    overflow-x: hidden;
+    transition: filter 0.5s ease-in;
+}
+
+.columnView:hover{
+    filter: grayscale(0);
+    filter: brightness(1);
+    overflow-y: visible;
+}
+
+.columnView h2 {
+    display: table-cell;
+    width: 50px;
+    height: 50px;
+    border: solid #d190fc 5px;
+    text-align: center;
+    margin: 10px;
+    font-size: 26px;
+    text-transform: uppercase;
+    vertical-align: middle;
+}
+
+.boxAdobe
+{
+    padding: 4px 7px;
+
+}
+
+.columnView p {
+
+    display: inline-block;
+    padding: 4px 7px;
+
+}
+
+#overlay {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 100;
+}
+
+.spinner {
+    width: 80px;
+    height: 80px;
+    border: 2px solid #f3f3f3;
+    border-top: 3px solid #f25a41;
+    border-radius: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    animation: spin 1s infinite linear;
+}
+
+::-moz-selection {
+    /* Code for Firefox */
+    color: white;
+    background: #F1693B;
+}
+
+::selection {
+    color: white;
+    background: #F1693B;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+
+
+.center {
+    text-align: center;
+    color: white;
+    padding: 10px;
+    background-color: rgba(241, 105, 59, .9);
+    position: fixed;
+    width: 100%;
+}
+
+.v-header {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    z-index: 1;
+    color: #fff;
+}
+
+.container {
+    margin: auto;
+    text-align: center;
+    background-color: black;
+}
+
+.fullscreen-video-wrap {
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75%;
+    overflow: hidden;
+}
+
+.fullscreen-video-wrap iframe {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+
+.fullscreen-video-wrap video {
+    
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.header-overlay {
+    height: 100vh;
+    width: 100vw;
+    top: 0;
+    left: 0;
+    background: #F1693B;
+    background: linear-gradient(-65deg, red, rgb(37, 40, 231), #F1693B);
+    opacity: .30;
+    position: absolute;
+    z-index: 1;
+}
+
+
+.box {
+    margin: 0 6%;
+}
+
+.box0 {
+    margin: 0 0%;
+}
+
+.box h3 {
+    color: #F1693B;
+    padding: 10px 0;
+    text-transform: uppercase;
+}
+
+.box p {
+    color: darkslategray;
+}
+
+.box ul li {
+    list-style-position: inside;
+    list-style-type: square;
+}
+
+.box ul li a {
+    color: darkslategray;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+
+.box ul li a:hover {
+    color: #F1693B;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+
+.column {
+    flex: calc(25% - 4*4px);
+    max-width: calc(25% - 4*4px);
+    padding: 0 4px;
+}
+
+.column img {
+    transition: 0.75s;
+    border: none;
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+    -webkit-filter: grayscale(90%) blur(1.5px);
+    -moz-filter: grayscale(90%) blur(1.5px);
+    -ms-filter: grayscale(90%) blur(1.5px);
+    -o-filter: grayscale(90%) blur(1.5px);
+    filter: grayscale(90%) blur(1.5px);
+    filter: gray;
+    z-index: 0;
+    position: relative;
+    
+}
+
+.column img:hover {
+    transition: transform .3s, filter .3s;
+    /* Animation */
+    transform: scale(1.1);
+    -webkit-filter: grayscale(0%) blur(0px);
+    -moz-filter: grayscale(0%) blur(0px);
+    -ms-filter: grayscale(0%) blur(0px);
+    -o-filter: grayscale(0%) blur(0px);
+    filter: grayscale(0%) blur(0px);
+    filter: none;
+    z-index: 1;
+    border: solid 2px rgba(241, 105, 59, .5);
+}
+
+.halfText {
+    column-count: 2;
+}
+
+halfText p {
+    vertical-align: middle;
+    margin-top: 8px;
+}
+
+.columnText {
+    float: left;
+    padding: 0 8px;
+    width: calc(50% - 16px);
+}
+
+.columnText p a {
+    color: #F1693B;
+    text-decoration: none;
+}
+
+/* Clear floats after the columns */
+
+.rowText:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+@media screen and (max-width: 1229px) {
+    .column {
+        transition: transform .5s;
+        flex: calc(33% - 4*3px);
+        max-width: calc(33% - 4*3px);
+    }
+    .columnText {
+        width: 100%;
+    }
+    .halfText {
+        column-count: 1;
+    }
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+
+@media screen and (max-width: 1320px) {
+    .column {
+        transition: .5s;
+        flex: calc(50% - 4*2px);
+        ;
+        max-width: calc(50% - 4*2px);
+        ;
+    }
+    .columnView {
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 650px) {
+    .column {
+        transition: .5s;
+        flex: 100%;
+        max-width: 100%;
+    }
+    .columnView {
+        flex: 100%;
+        max-width: 100%;
+    }
+
+    
+
+}
+
+@media only screen and (max-width: 450px)
+{
+    .text-block
+    {
+        display: none;
+    }
+}
+
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+
+
+.clearfix:before,
+.clearfix:after
+{
+    content: ' ';
+    display: block;
+
+}
+
+.clearfix:before,
+.clearfix:after
+{
+    content: ' ';
+    display: block;
+
+}
+.clearfix:after
+{
+    clear: both;
+}
+
+.clearfix
+{
+    *zoom: 1;
+}
+
+.image
+{
+    position: absolute;
+    top: 50%;
+    left: 5%;
+
+    animation-name: slide;
+    animation-duration: 1.3s;
+    animation-timing-function: ease-out;
+    animation-iteration-count: 1;
+    animation-delay: 1s;
+    animation-fill-mode: both;
+    transition: 550ms;
+}
+
+@media only screen and (max-width: 321px)
+{
+    .image{
+        float: none !important;
+        display: none;
+    }
+
+    
+    .navbar
+    {
+        float: none !important;
+    }
+
+    .container
+    {
+        clear: both;
+    }
+}
+
+.navbar
+{
+    position: relative;
+    z-index: 5;
+    float: right;
+    
+    margin-right: 5%;
+    top:50%;
+    transform: translateY(-50%);
+
+}
+
+
+.navbar ul
+{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+.navbar ul li
+{
+    display: inline-block;
+    margin-left: 15px;
+}
+
+.navbar ul li:hover
+{
+    cursor: pointer;
+}
+
+
+
+.navbar ul li a
+{
+    font-size: 14px;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 350ms ease-in-out;
+}
+
+.navbar ul li a:hover
+{
+    color: rgb(201, 201, 201);
+}
+
+.navbar ul li a:active
+{
+    color: rgb(122, 122, 122);
+}
+
+
+.containerNav
+{
+    border-bottom: solid 2px rgb(145, 145, 145);
+    height: 12.5vh;
+    background-color:rgb(0, 0, 0, 0.2);
+    position: absolute;
+    width: 100%;
+    top: 0;
+    z-index: 8;
+    overflow: hidden;
+
+}
+
+
+.containerNav p
+{
+    margin-left: 9%;
+    color: white;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    
+}
+
+
+.wrapperBottom
+{
+    position: absolute;
+    z-index: 8;
+    width: 100%;
+    top: 87.5vh;
+    height: 12.5vh;
+    border-top: 1px solid white;
+}
+
+.title {
+    margin: 30px 0 7px 0;
+}
+
+.social-media
+{
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    margin-left: 5%;
+    
+    float: left;
+    position: relative;
+}
+
+
+.text-block {
+    float: right;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: solid 1px white;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+    
+    top: 50%;
+    transform: translateY(-50%);
+    right: 5%;
+
+    cursor: pointer;
+
+    transition: background-color .5s;
+}
+
+.text-block:hover{
+    background-color: rgba(64, 120, 192, 0.2);
+}
+
+
+ /* Style all font awesome icons */
+ .fa {
+    position: relative;
+    
+    padding: 6px 15px;
+    text-align: center;
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0.5);
+    border: 1px solid white;
+    color: white;
+    cursor: pointer;
+    transition: background-color .5s;
+}
+
+
+/* Add a hover effect if you want */
+/* .fa:hover {
+    opacity: 0.7;
+} */
+
+/* Set a specific color for each brand */
+
+/* Facebook */
+
+
+.fa-facebook:hover {
+
+    background-color: rgba(18, 29, 131, 0.2);
+}
+
+.fa-linkedin:hover {
+    background-color: rgba(0, 119, 181, 0.2);
+
+}
+
+
+.fa-github:hover {
+    background-color: rgba(110, 84, 148, 0.2);
+
+}
+
+
+.fa-skype:hover {
+    background-color: rgba(0,175,240, 0.2);
+
+}
+
+@keyframes slide
+{
+    0% {left:-45px; transform: translate(0, -50%) rotate(50deg);}
+    100% {transform: translate(0%,-50%) rotate(360deg);}
+}
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    background-color: rgb(0, 0, 0, 0.9);
+    border-radius: 5%;
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+    padding: 5px 10px;
+    top: -50px;
+    left: -18px;
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+
+
+
+
+
+}
+
+
+
+
+.tooltiptext:after { 
+    content: ''; 
+    position: absolute; 
+    bottom: 0; left: 50%; 
+    width: 0; height: 0; 
+    border: 6px solid transparent; 
+    border-top-color: rgb(0, 0, 0, 0.9); 
+    border-bottom: 0; border-left: 0; 
+    margin-left: -3px; 
+    margin-bottom: -5px; 
+}
+
+
+/* Show the tooltip text when you mouse over the tooltip container */
+/* .tooltip:hover .tooltiptext {
+    visibility: visible;
+} */

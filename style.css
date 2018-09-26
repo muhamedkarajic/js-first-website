@@ -36,7 +36,7 @@
     background-color: #1E0C36;
     filter: grayscale(30%);
     filter: brightness(.5);
-    overflow-y: hidden;
+    overflow-y: auto;
     overflow-x: hidden;
     transition: filter 0.5s ease-in;
 }
@@ -44,28 +44,8 @@
 .columnView:hover{
     filter: grayscale(0);
     filter: brightness(1);
-    overflow-y: visible;
 }
 
-.columnView:target{
-    filter: grayscale(0);
-    filter: brightness(1);
-    overflow-y: visible;
-}
-
-
-.columnView:active{
-    filter: grayscale(0);
-    filter: brightness(1);
-    overflow-y: visible;
-}
-
-
-.columnView:focus{
-    filter: grayscale(0);
-    filter: brightness(1);
-    overflow-y: visible;
-}
 .columnView h2 {
     display: table-cell;
     width: 50px;

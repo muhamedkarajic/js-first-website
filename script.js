@@ -1,3 +1,19 @@
+function pauseStream() 
+{
+    var video = document.getElementById('video');
+    var button = document.getElementById('video-button');
+
+    if (video.paused) {
+        video.play();
+        document.getElementById('video-button').innerHTML = "HELLO WORLD";
+    }
+    else {
+        video.pause();
+        button.innerHTML = "H3770 W0R7D";
+    }
+}
+
+
 const copyToClipboard = str => {
     const el = document.createElement('textarea');
     el.value = "muhamedkarajic";
@@ -22,11 +38,23 @@ window.addEventListener('load', function () {
     function checkLoad() {
         if (video.readyState === 4) {
             video.play();
+
             preloader.style.display = 'none';
+
+            //for button
+            var button = document.getElementById('video-button');
+            if (video.paused) {
+                button.innerHTML = "H3770 W0R7D";
+            }
+            else {
+                document.getElementById('video-button').innerHTML = "HELLO WORLD";
+            }
+            
         } else {
             setTimeout(checkLoad, 100);
         }
     }
 
     checkLoad();
+
 }, false);

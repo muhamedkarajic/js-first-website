@@ -157,9 +157,9 @@ body {
 
 .fullscreen-video-wrap video {
     
-   width: 100%;
-   height: 100%;
-   background-size: cover;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
 }
 
 .header-overlay {
@@ -526,7 +526,8 @@ halfText p {
     padding-bottom: 5px;
     padding-left: 20px;
     padding-right: 20px;
-    
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 17px;
     top: 50%;
     transform: translateY(-50%);
     right: 5%;
@@ -534,6 +535,11 @@ halfText p {
     cursor: pointer;
 
     transition: background-color .5s;
+}
+
+#video-button:active
+{
+    background-color: rgba(64, 120, 192, 0.5);
 }
 
 .text-block:hover{
@@ -612,15 +618,7 @@ halfText p {
     /* Position the tooltip text - see examples below! */
     position: absolute;
     z-index: 1;
-
-
-
-
-
 }
-
-
-
 
 .tooltiptext:after { 
     content: ''; 
@@ -633,9 +631,3 @@ halfText p {
     margin-left: -3px; 
     margin-bottom: -5px; 
 }
-
-
-/* Show the tooltip text when you mouse over the tooltip container */
-/* .tooltip:hover .tooltiptext {
-    visibility: visible;
-} */

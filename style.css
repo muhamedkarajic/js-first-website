@@ -53,6 +53,13 @@
     overflow-y: visible;
 }
 
+
+.columnView:active{
+    filter: grayscale(0);
+    filter: brightness(1);
+    overflow-y: visible;
+}
+
 .columnView h2 {
     display: table-cell;
     width: 50px;

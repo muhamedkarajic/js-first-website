@@ -385,7 +385,7 @@ halfText p {
 
 @media only screen and (max-width: 321px)
 {
-    .image{
+    #logo{
         float: none !important;
         display: none;
     }

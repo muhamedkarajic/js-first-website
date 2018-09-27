@@ -363,18 +363,23 @@ halfText p {
     *zoom: 1;
 }
 
-.image
+#logo
 {
     position: absolute;
     top: 50%;
     left: 5%;
+}
 
+.logo-animation
+{
+    
     animation-name: slide;
     animation-duration: 1.3s;
     animation-timing-function: ease-out;
     animation-iteration-count: 1;
     animation-delay: 1s;
     animation-fill-mode: both;
+
     transition: 550ms;
 }
 

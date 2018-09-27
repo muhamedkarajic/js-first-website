@@ -35,11 +35,12 @@ window.addEventListener('load', function () {
     var video = document.getElementById('video');
     var preloader = document.getElementById('overlay');
 
+
     function checkLoad() {
         if (video.readyState === 4) {
             video.play();
-
             preloader.style.display = 'none';
+            document.getElementById("logo").classList.add("logo-animation");
 
             //for button
             var button = document.getElementById('video-button');

@@ -383,7 +383,7 @@ halfText p {
     transition: 550ms;
 }
 
-@media only screen and (max-width: 321px)
+@media only screen and (max-width: 326px)
 {
     #logo{
         float: none !important;

@@ -41,6 +41,7 @@
     transition: filter 0.5s ease-in;
 }
 
+
 .columnView:hover{
     filter: grayscale(0);
     filter: brightness(1);
@@ -327,15 +328,6 @@ halfText p {
     
 
 }
-/* 
-@media only screen and (max-width: 450px)
-{
-    .text-block
-    {
-        display: none;
-    }
-} */
-
 
 @keyframes spin {
     from {
@@ -345,10 +337,6 @@ halfText p {
         transform: rotate(360deg);
     }
 }
-
-
-
-
 
 .clearfix:before,
 .clearfix:after
@@ -421,7 +409,6 @@ halfText p {
 
 }
 
-
 .navbar ul
 {
     list-style-type: none;
@@ -450,7 +437,7 @@ halfText p {
     color: white;
     text-transform: uppercase;
     letter-spacing: 2px;
-    transition: color 350ms ease-in-out;
+    transition: color 250ms ease-in;
 }
 
 .navbar ul li a:hover
@@ -531,10 +518,9 @@ halfText p {
     top: 50%;
     transform: translateY(-50%);
     right: 5%;
-
     cursor: pointer;
 
-    transition: background-color .5s;
+    transition: background-color .25s ease-in;
 }
 
 #video-button:active
@@ -558,7 +544,7 @@ halfText p {
     border: 1px solid white;
     color: white;
     cursor: pointer;
-    transition: background-color .5s;
+    transition: background-color .25s ease-in;
 }
 
 
@@ -596,7 +582,7 @@ halfText p {
 
 @keyframes slide
 {
-    0% {left:-45px; transform: translate(0, -50%) rotate(50deg);}
+    0% {left:-60px; transform: translate(0, -50%) rotate(50deg);}
     100% {transform: translate(0%,-50%) rotate(360deg);}
 }
 .tooltip {

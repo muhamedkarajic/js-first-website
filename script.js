@@ -5,14 +5,8 @@ var i = 0;
 
 function checkLoad() {
     console.log(i);
-    if(i === 60)
-    {
-        preloader.style.display = 'none';
-        preloader.visibility = "hidden";
-        return 0;
-    }
 
-    if (video.readyState === 4) {
+    if (video.readyState === 4 || i === 60) {
         //video.play();
         
         preloader.style.display = 'none';

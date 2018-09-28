@@ -7,11 +7,12 @@ function pauseStream()
 
     if (video.paused) {
         video.play();
-        document.getElementById('video-button').innerHTML = "HELLO WORLD";
+
+        button.className = "fa fa-pause";
     }
     else {
         video.pause();
-        button.innerHTML = "H3770 W0R7D";
+        button.className = "fa fa-play";
     }
 }
 
@@ -47,10 +48,13 @@ window.addEventListener('load', function () {
             //for button
             var button = document.getElementById('video-button');
             if (video.paused) {
-                button.innerHTML = "H3770 W0R7D";
+                button.setAttribute("class", "fa fa-play");
+                // button.innerHTML = "H3770 W0R7D";
             }
             else {
-                document.getElementById('video-button').innerHTML = "HELLO WORLD";
+                button.setAttribute("class", "fa fa-pause");
+
+                // document.getElementById('video-button').innerHTML = "HELLO WORLD";
             }
             
         } else {
@@ -63,8 +67,8 @@ window.addEventListener('load', function () {
 }, false);
 
 
-setTimeout(function(){ 
-    document.getElementById('video').play();
-    console.log("Executed!");
-}, 20000);
+// setTimeout(function(){ 
+//     document.getElementById('video').play();
+//     console.log("Executed!");
+// }, 20000);
 

@@ -411,6 +411,8 @@ halfText p {
     position: absolute;
     top: 50%;
     left: 5%;
+
+    float: left;
 }
 
 .logo-animation
@@ -432,7 +434,6 @@ halfText p {
         float: none !important;
         display: none;
     }
-    columnText    
     .navbar
     {
         float: none !important;
@@ -552,36 +553,23 @@ halfText p {
 }
 
 
-.text-block {
-    /* float: right; */
-    position: relative;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: solid 1px white;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 20px;
-    padding-right: 20px;
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 17px;
-    top: 50%;
-    transform: translateY(-50%);
+#video-button {
+    float: right;
     right: 5%;
     cursor: pointer;
-    visibility: hidden;
     transition: background-color .25s ease-in;
+}
+
+
+
+#video-button:hover{
+    color: rgba(255, 255, 255, 0.7);
 }
 
 #video-button:active
 {
-    background-color: rgba(64, 120, 192, 0.5);
+    color: rgba(255, 255, 255, 0.5);
 }
-
-.text-block:hover{
-    background-color: rgba(64, 120, 192, 0.2);
-}
-
-
  /* Style all font awesome icons */
  .fa {
     position: relative;

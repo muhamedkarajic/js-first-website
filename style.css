@@ -538,7 +538,7 @@ halfText p {
     transform: translateY(-50%);
     font-size: 18px;
     margin-left: 5%;
-    float: left;
+    /* float: left; */
     position: relative;
 }
 
@@ -559,7 +559,7 @@ halfText p {
     transform: translateY(-50%);
     right: 5%;
     cursor: pointer;
-visibility: hidden;
+    visibility: hidden;
     transition: background-color .25s ease-in;
 }
 

@@ -1,3 +1,8 @@
+setTimeout(function(){ 
+    document.getElementById('video').play();
+}, 12000);
+
+
 
 function pauseStream() 
 {

@@ -1,7 +1,3 @@
-setTimeout(function(){ 
-    document.getElementById('video').play();
-}, 12000);
-
 
 
 function pauseStream() 
@@ -65,3 +61,10 @@ window.addEventListener('load', function () {
     checkLoad();
 
 }, false);
+
+
+setTimeout(function(){ 
+    document.getElementById('video').play();
+    console.log("Executed!");
+}, 20000);
+

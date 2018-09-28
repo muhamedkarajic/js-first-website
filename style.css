@@ -150,6 +150,16 @@ body {
     overflow: hidden;
 }
 
+.fullscreen-video-wrap h3 {
+    position: absolute;
+    z-index: 9;
+    text-transform: uppercase;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 45px;
+}
+
 .fullscreen-video-wrap iframe {
     position: absolute;
     top: 0;
@@ -528,7 +538,6 @@ halfText p {
     transform: translateY(-50%);
     font-size: 18px;
     margin-left: 5%;
-    
     float: left;
     position: relative;
 }
@@ -550,7 +559,7 @@ halfText p {
     transform: translateY(-50%);
     right: 5%;
     cursor: pointer;
-
+visibility: hidden;
     transition: background-color .25s ease-in;
 }
 
@@ -567,15 +576,15 @@ halfText p {
  /* Style all font awesome icons */
  .fa {
     position: relative;
-    
+    background: transparent;
+    border: transparent;
     padding: 6px 15px;
     text-align: center;
     text-decoration: none;
-    background-color: rgba(0, 0, 0, 0.5);
-    border: 1px solid white;
-    color: white;
+    color: rgba(255, 255, 255, 1);
+
     cursor: pointer;
-    transition: background-color .25s ease-in;
+    transition: /*background-color*/ color .25s ease-in;
 }
 
 
@@ -590,24 +599,28 @@ halfText p {
 
 
 .fa-facebook:hover {
+    color: rgba(255, 255, 255, 0.7);
 
-    background-color: rgba(18, 29, 131, 0.2);
+    /* background-color: rgba(18, 29, 131, 0.3); */
 }
 
 .fa-linkedin:hover {
-    background-color: rgba(0, 119, 181, 0.2);
+    /* background-color: rgba(0, 119, 181, 0.3); */
+    color: rgba(255, 255, 255, 0.7);
 
 }
 
 
 .fa-github:hover {
-    background-color: rgba(110, 84, 148, 0.2);
+    /* background-color: rgba(110, 84, 148, 0.3); */
+    color: rgba(255, 255, 255, 0.7);
 
 }
 
 
 .fa-skype:hover {
-    background-color: rgba(0,175,240, 0.2);
+    /* background-color: rgba(0,175,240, 0.3); */
+    color: rgba(255, 255, 255, 0.7);
 
 }
 

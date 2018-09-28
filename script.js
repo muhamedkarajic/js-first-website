@@ -1,3 +1,4 @@
+
 function pauseStream() 
 {
     var video = document.getElementById('video');

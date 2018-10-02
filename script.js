@@ -4,10 +4,9 @@ var i = 0;
 
 
 function checkLoad() {
-    console.log(i);
+    // console.log(i);
 
     if (video.readyState === 4 || i === 60) {
-        //video.play();
         
         preloader.style.display = 'none';
         

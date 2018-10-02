@@ -152,7 +152,7 @@ body {
 
 .fullscreen-video-wrap h3 {
     position: absolute;
-    z-index: 9;
+    z-index: 9; 
     text-transform: uppercase;
     top: 50%;
     left: 50%;
@@ -226,17 +226,26 @@ body {
     text-transform: uppercase;
 }
 
+.box h4 {
+    color: #F1693B;
+    padding: 10px 0;
+    padding-bottom: 5px;
+    text-transform: uppercase;
+}
+
+
 .box p {
-    color: darkslategray;
+    color: rgb(37, 37, 37);
 }
 
 .box ul li {
     list-style-position: inside;
-    list-style-type: square;
+    list-style-type: none;
+    padding-left: 0;
 }
 
 .box ul li a {
-    color: darkslategray;
+    color: rgb(44, 44, 44);
     text-transform: capitalize;
     text-decoration: none;
 }
@@ -657,4 +666,45 @@ halfText p {
     border-bottom: 0; border-left: 0; 
     margin-left: -3px; 
     margin-bottom: -5px; 
+}
+
+
+.middle
+{
+    margin: auto;
+}
+.rows
+{
+   display: flex;
+   font-size: 0;
+}
+
+
+
+.columns
+{
+    font-size: 16px;
+    padding: 7px;
+    width: 33%;
+    display: inline-block;
+}
+
+
+.bullets
+{
+    padding: 0;
+    cursor: unset;
+}
+
+@media only screen and (max-width: 540px)
+{
+    .rows
+    {
+        display: block;
+        position: relative;
+
+    }
+    .columns{
+        display: block;
+    }
 }

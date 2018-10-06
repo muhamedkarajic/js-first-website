@@ -212,7 +212,7 @@ body {
 }
 
 
-.box {
+.box-wrapper {
     margin: 0 6%;
 }
 
@@ -220,13 +220,13 @@ body {
     margin: 0 0%;
 }
 
-.box h3 {
+.box-wrapper h3 {
     color: #F1693B;
     padding: 10px 0;
     text-transform: uppercase;
 }
 
-.box h4 {
+.box-wrapper h4 {
     color: #F1693B;
     padding: 10px 0;
     padding-bottom: 5px;
@@ -234,23 +234,23 @@ body {
 }
 
 
-.box p {
+.box-wrapper p {
     color: rgb(37, 37, 37);
 }
 
-.box ul li {
+.box-wrapper ul li {
     list-style-position: inside;
     list-style-type: none;
     padding-left: 0;
 }
 
-.box ul li a {
+.box-wrapper ul li a {
     color: rgb(44, 44, 44);
     text-transform: capitalize;
     text-decoration: none;
 }
 
-.box ul li a:hover {
+.box-wrapper ul li a:hover {
     color: #F1693B;
 }
 
@@ -671,12 +671,16 @@ halfText p {
 
 .middle
 {
+    width: 510px;
     margin: auto;
 }
 .rows
 {
    display: flex;
    font-size: 0;
+   position: relative      ;
+   right: 50%;
+   transform: translateX(50%);
 }
 
 
@@ -696,15 +700,3 @@ halfText p {
     cursor: unset;
 }
 
-@media only screen and (max-width: 540px)
-{
-    .rows
-    {
-        display: block;
-        position: relative;
-
-    }
-    .columns{
-        display: block;
-    }
-}

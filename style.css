@@ -357,9 +357,7 @@ halfText p {
     .column {
         transition: .5s;
         flex: calc(50% - 4*2px);
-        ;
         max-width: calc(50% - 4*2px);
-        ;
     }
     .columnView {
         width: 50%;
@@ -372,6 +370,7 @@ halfText p {
     .column {
         transition: .5s;
         max-width: 100%;
+        flex: 100%;
     }
     .columnView {
         width: 100%;

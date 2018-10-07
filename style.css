@@ -267,10 +267,14 @@ body {
     flex: calc(25% - 4*4px);
     max-width: calc(25% - 4*4px);
     padding: 0 4px;
+
+    perspective: 400vw;
+    
 }
 
 .column img {
-    transition: 0.75s;
+    position: relative;
+    transform: translate3d(0,0,0) rotate3d(0, 6deg, 0, 0.15rad);
     border: none;
     margin-top: 8px;
     vertical-align: middle;
@@ -283,6 +287,7 @@ body {
     filter: gray;
     z-index: 0;
     opacity: 0.3;
+    transition: transform .7s, filter .7s, opacity .7s;
     position: relative;
 
     
@@ -291,11 +296,12 @@ body {
 
 
 .column img:hover {
+    
+    transition: transform .3s, filter .3s, opacity .3s;
     opacity: 1;
-
-    transition: transform .3s, filter .3s;
     /* Animation */
-    transform: scale(1.1);
+    
+    transform: scale3d(1.1,1.1,1);
     -webkit-filter: grayscale(0%) blur(0px);
     -moz-filter: grayscale(0%) blur(0px);
     -ms-filter: grayscale(0%) blur(0px);

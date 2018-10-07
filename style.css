@@ -274,7 +274,7 @@ body {
 
 .column img {
     position: relative;
-    transform: translate3d(0,0,0) rotate3d(0, 6deg, 0, 0.15rad);
+    transform: translate3d(0,0,0);
     border: none;
     margin-top: 8px;
     vertical-align: middle;
@@ -289,7 +289,8 @@ body {
     opacity: 0.3;
     transition: transform .7s, filter .7s, opacity .7s;
     position: relative;
-
+    background: red;
+    
     
     
 }
@@ -298,7 +299,6 @@ body {
 .column img:hover {
     
     transition: transform .3s, filter .3s, opacity .3s;
-    opacity: 1;
     /* Animation */
     
     transform: scale3d(1.1,1.1,1);
@@ -306,9 +306,10 @@ body {
     -moz-filter: grayscale(0%) blur(0px);
     -ms-filter: grayscale(0%) blur(0px);
     -o-filter: grayscale(0%) blur(0px);
-    filter: grayscale(0%) blur(0px);
+    filter: grayscale(0%) blur(0px) ;
     filter: none;
     z-index: 1;
+    opacity: 1;
     /* border: solid 2px rgba(241, 105, 59, .5); */
 
     
@@ -630,13 +631,11 @@ halfText p {
 
 }
 
-
 .fa-github:hover {
     /* background-color: rgba(110, 84, 148, 0.3); */
     color: rgba(255, 255, 255, 0.7);
 
 }
-
 
 .fa-skype:hover {
     /* background-color: rgba(0,175,240, 0.3); */
@@ -682,7 +681,6 @@ halfText p {
     margin-bottom: -5px; 
 }
 
-
 .middle
 {
     width: 510px;
@@ -697,8 +695,6 @@ halfText p {
    transform: translateX(50%);
 }
 
-
-
 .columns
 {
     font-size: 16px;
@@ -706,7 +702,6 @@ halfText p {
     width: 33%;
     display: inline-block;
 }
-
 
 .bullets
 {

@@ -214,6 +214,7 @@ body {
 
 .box-wrapper {
     margin: 0 6%;
+    
 }
 
 .box0 {
@@ -258,7 +259,6 @@ body {
     display: flex;
     flex-wrap: wrap;
     padding: 0 4px;
-
 }
 
 /* Create four equal columns that sits next to each other */
@@ -351,6 +351,7 @@ halfText p {
     content: "";
     display: table;
     clear: both;
+
 }
 
 @media screen and (max-width: 1229px) {
@@ -708,4 +709,3 @@ halfText p {
     padding: 0;
     cursor: unset;
 }
-

@@ -46,6 +46,11 @@ window.addEventListener('load', function () {
     checkLoad();
 }, false);
 
+
+
+
+
+
 function pauseStream() 
 {
     var video = document.getElementById('video');
@@ -79,5 +84,5 @@ const copyToClipboard = str => {
 };
 
 
-
+document.getElementById('video-button').focus();
 

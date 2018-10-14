@@ -1,52 +1,50 @@
-var video = document.getElementById('video');
-var preloader = document.getElementById('overlay');
-var i = 0;
+// var video = document.getElementById('video');
+// var preloader = document.getElementById('overlay');
+// var i = 0;
 
 
-function checkLoad() {
-    // console.log(i);
+// function checkLoad() {
+//     // console.log(i);
 
-    if (video.readyState === 4 || i === 60) {
+//     if (video.readyState === 4 || i === 60) {
         
-        preloader.style.display = 'none';
+//         preloader.style.display = 'none';
         
-        document.getElementById("logo").classList.add("logo-animation");
-        if (video.paused) { 
-            document.getElementById('video-button').className = "fa fa-play"; 
-        }
-        
-    } else {
-        i++;
-        setTimeout(checkLoad, 100);
-    }
-};
-checkLoad();
-
-
-
-
-// window.addEventListener('load', function () {
-
-//     var video = document.getElementById('video');
-//     var preloader = document.getElementById('overlay');
-//     function checkLoad() {
-
-//         if (video.readyState === 4) {
-//             //video.play();
-            
-//             preloader.style.display = 'none';
-
-//             document.getElementById("logo").classList.add("logo-animation");
-//             if (video.paused) { 
-//                 document.getElementById('video-button').className = "fa fa-play"; 
-//             }
-            
-//         } else {
-//                 setTimeout(checkLoad, 100);
+//         document.getElementById("logo").classList.add("logo-animation");
+//         if (video.paused) { 
+//             document.getElementById('video-button').className = "fa fa-play"; 
 //         }
+        
+//     } else {
+//         i++;
+//         setTimeout(checkLoad, 100);
 //     }
-//     checkLoad();
-// }, false);
+// };
+// checkLoad();
+
+
+
+var i = 0;
+window.addEventListener('load', function () {
+    var video = document.getElementById('video');
+    var preloader = document.getElementById('overlay');
+    function checkLoad() {
+        if (video.readyState === 4 || i === 60) {
+            //video.play();
+        
+            preloader.style.display = 'none';
+            document.getElementById("logo").classList.add("logo-animation");
+            if (video.paused) { 
+                document.getElementById('video-button').className = "fa fa-play"; 
+            }
+        
+        } else {
+                i++;
+                setTimeout(checkLoad, 100);
+        }
+    }
+    checkLoad();
+}, false);
 
 function pauseStream() 
 {

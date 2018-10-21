@@ -53,9 +53,6 @@ video.onpause = function() {
     document.getElementById('video-button').className = "fa fa-play"; 
 }; 
 
-
-
-
 function pauseStream() 
 {
     var video = document.getElementById('video');

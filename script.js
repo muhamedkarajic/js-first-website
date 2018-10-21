@@ -30,48 +30,27 @@ var spinner = document.getElementById('spinner');
 document.getElementById("logo").classList.add("logo-animation");
 
 function checkLoad() {
-    i++;
-    console.log(i);
-    if (video.readyState === 4) {
+        preloader.style.display = 'none';
         document.getElementById("logo").classList.add("logo-animation");
         if (video.paused) { 
-            
             document.getElementById('video-button').className = "fa fa-play"; 
         }
-        else{
-            spinner.style.display = 'none';
-        }
-      
-     } else {
-         i++;
-         preloader.style.display = 'none';
-        
-     }
-    
 }
 
 video.addEventListener('canplay', checkLoad(), false);
-
 
 function pauseStream() 
 {
     var video = document.getElementById('video');
     var button = document.getElementById('video-button');
-    var spinner = document.getElementById('spinner');
 
     if (video.paused) {
         video.play();
         button.className = "fa fa-pause";
-        if(video.readyState != 4)
-        {
-            spinner.style.display = 'block';
-        }
     }
     else {
         video.pause();
         button.className = "fa fa-play";
-        spinner.style.display = 'none';
-
     }
 }
 

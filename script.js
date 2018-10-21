@@ -43,7 +43,7 @@ window.addEventListener('load', function () {
         else if(i === 10)
         {
             i++;
-            preloader.style.background = 'transparent';
+            preloader.style.background = 'none';
             setTimeout(checkLoad, 100);
             document.getElementById("logo").classList.add("logo-animation");
             if (video.paused) { 

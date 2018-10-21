@@ -34,11 +34,12 @@ function checkLoad() {
     i++;
     console.log(i);
 
-    spinner.style.display = 'none';
     document.getElementById("logo").classList.add("logo-animation");
     if (video.paused) { 
         document.getElementById('video-button').className = "fa fa-play"; 
     }
+    else
+    { spinner.style.display = 'none'; }
 }
 
 video.addEventListener('canplay', checkLoad(), false);

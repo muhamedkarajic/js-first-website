@@ -23,12 +23,10 @@
 // checkLoad();
 
 
-
 var i = 0;
 window.addEventListener('load', function () {
     var video = document.getElementById('video');
     var preloader = document.getElementById('overlay');
-    
     function checkLoad() {
         if (video.readyState === 4) {
             //video.play();
@@ -38,27 +36,23 @@ window.addEventListener('load', function () {
             if (video.paused) { 
                 document.getElementById('video-button').className = "fa fa-play"; 
             }
-        
+            console.log("Executed ready state....");
         } 
-        else if(i === 10)
-        {
-            i++;
-            preloader.style.background = 'none';
-            setTimeout(checkLoad, 100);
-            document.getElementById("logo").classList.add("logo-animation");
-            if (video.paused) { 
-                document.getElementById('video-button').className = "fa fa-play"; 
-            }
-        }
+        
         
         else {
+                if(i === 10)
+                {
+                    preloader.style.background = 'none';
+                    console.log("Executed 10 state....");
+                 }
+                 console.log(i);
                 i++;
                 setTimeout(checkLoad, 100);
         }
     }
     checkLoad();
 }, false);
-
 
 
 

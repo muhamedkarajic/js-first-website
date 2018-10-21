@@ -24,30 +24,30 @@
 
 
 var i = 0;
-window.addEventListener('load', function () {
-    var video = document.getElementById('video');
-    var preloader = document.getElementById('overlay');
-    var spinner = document.getElementById('spinner');
-    
-    preloader.style.display = 'none';
-    document.getElementById("logo").classList.add("logo-animation");
+var video = document.getElementById('video');
+var preloader = document.getElementById('overlay');
+var spinner = document.getElementById('spinner');
+preloader.style.display = 'none';
+document.getElementById("logo").classList.add("logo-animation");
 
-    function checkLoad() {
-        if (video.readyState === 4 || i === 60) {
-            spinner.style.display = 'none';
-            document.getElementById("logo").classList.add("logo-animation");
-            if (video.paused) { 
-                document.getElementById('video-button').className = "fa fa-play"; 
-            }
-        } 
-        else {
-                i++;
-                spinner.style.display = 'block';
-                setTimeout(checkLoad, 100);
+function checkLoad() {
+    i++;
+    console.log(i);
+
+    if (video.readyState === 4 || i === 60) {
+        spinner.style.display = 'none';
+        document.getElementById("logo").classList.add("logo-animation");
+        if (video.paused) { 
+            document.getElementById('video-button').className = "fa fa-play"; 
         }
+    } 
+    else {
+            spinner.style.display = 'block';
+            setTimeout(checkLoad, 100);
     }
-    checkLoad();
-}, false);
+}
+
+window.addEventListener('load', checkLoad(), false);
 
 
 function pauseStream() 

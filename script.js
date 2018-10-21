@@ -85,7 +85,7 @@ const copyToClipboard = str => {
 
 
 document.getElementById('video-button').focus();
-
+var preview_bar = document.getElementById("preview-bar");
 function parallex()
 {
     var xScrollPosition = window.scrollX;
@@ -93,7 +93,8 @@ function parallex()
 
     ypos = window.pageYOffset;
     console.log("ypos = "+ypos + "  -> yscroll = "+yScrollPosition);
-    document.getElementById("preview-bar").style.transform ="translate3d(" +xScrollPosition+(yScrollPosition*0.2) +"px,"+ yScrollPosition*(-1)+"px,0)";
+    preview_bar.style.transform ="translate3d(" +xScrollPosition+(yScrollPosition*0.2) +"px,"+ yScrollPosition*(-1)+"px,0)";
+
 }
 window.addEventListener('scroll', parallex);
 

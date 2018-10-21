@@ -27,19 +27,27 @@ var i = 0;
 var video = document.getElementById('video');
 var preloader = document.getElementById('overlay');
 var spinner = document.getElementById('spinner');
-preloader.style.display = 'none';
 document.getElementById("logo").classList.add("logo-animation");
 
 function checkLoad() {
     i++;
     console.log(i);
+    if (video.readyState === 4 || i === 60) {
+        document.getElementById("logo").classList.add("logo-animation");
+        if (video.paused) { 
+            
+            document.getElementById('video-button').className = "fa fa-play"; 
+        }
+        else{
+            spinner.style.display = 'none';
+        }
+      
+     } else {
+         i++;
+         preloader.style.display = 'none';
 
-    document.getElementById("logo").classList.add("logo-animation");
-    if (video.paused) { 
-        document.getElementById('video-button').className = "fa fa-play"; 
-    }
-    else
-    { spinner.style.display = 'none'; }
+     }
+    
 }
 
 video.addEventListener('canplay', checkLoad(), false);

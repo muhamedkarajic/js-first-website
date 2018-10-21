@@ -31,8 +31,7 @@ window.addEventListener('load', function () {
     preloader.style.background = 'none';
 
     function checkLoad() {
-        if (video.readyState === 4) {
-            console.log("Executed ready state....");
+        if (video.readyState === 4 || i === 60) {
             preloader.style.display = 'none';
             document.getElementById("logo").classList.add("logo-animation");
             if (video.paused) { 
@@ -40,7 +39,6 @@ window.addEventListener('load', function () {
             }
         } 
         else {
-                console.log(i);
                 i++;
                 setTimeout(checkLoad, 100);
         }

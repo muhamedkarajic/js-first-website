@@ -52,15 +52,21 @@ function pauseStream()
 {
     var video = document.getElementById('video');
     var button = document.getElementById('video-button');
+    var preloader = document.getElementById('overlay');
 
     if (video.paused) {
         video.play();
         button.className = "fa fa-pause";
-
+        if(video.readyState != 4)
+        {
+            preloader.style.display = 'block';
+        }
     }
     else {
         video.pause();
         button.className = "fa fa-play";
+        preloader.style.display = 'none';
+
     }
 }
 

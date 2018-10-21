@@ -93,7 +93,7 @@ function parallex()
 
     ypos = window.pageYOffset;
     console.log("ypos = "+ypos + "  -> yscroll = "+yScrollPosition);
-    preview_bar.style.transform ="translate3d(" +xScrollPosition+(yScrollPosition*0.2) +"px,"+ yScrollPosition*(-1)+"px,0)";
+    preview_bar.style.transform ="translate3d(" +0 +"px,"+ yScrollPosition*(-1)+"px,0)";
 
 }
 window.addEventListener('scroll', parallex);

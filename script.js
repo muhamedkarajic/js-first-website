@@ -29,7 +29,7 @@ window.addEventListener('load', function () {
     var preloader = document.getElementById('overlay');
     var spinner = document.getElementById('spinner');
     
-    preloader.style.background = 'none';
+    preloader.style.display = 'none';
     document.getElementById("logo").classList.add("logo-animation");
 
     function checkLoad() {
@@ -42,6 +42,7 @@ window.addEventListener('load', function () {
         } 
         else {
                 i++;
+                spinner.style.display = 'block';
                 setTimeout(checkLoad, 100);
         }
     }

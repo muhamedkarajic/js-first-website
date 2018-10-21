@@ -34,16 +34,10 @@ function checkLoad() {
     i++;
     console.log(i);
 
-    if (video.readyState === 4 || i === 60) {
-        spinner.style.display = 'none';
-        document.getElementById("logo").classList.add("logo-animation");
-        if (video.paused) { 
-            document.getElementById('video-button').className = "fa fa-play"; 
-        }
-    } 
-    else {
-            spinner.style.display = 'block';
-            setTimeout(checkLoad, 100);
+    spinner.style.display = 'none';
+    document.getElementById("logo").classList.add("logo-animation");
+    if (video.paused) { 
+        document.getElementById('video-button').className = "fa fa-play"; 
     }
 }
 

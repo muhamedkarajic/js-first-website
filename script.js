@@ -30,9 +30,6 @@ window.addEventListener('load', function () {
     
     preloader.style.background = 'none';
     document.getElementById("logo").classList.add("logo-animation");
-    if (video.paused) { 
-        document.getElementById('video-button').className = "fa fa-play"; 
-    }
 
     function checkLoad() {
         if (video.readyState === 4 || i === 60) {

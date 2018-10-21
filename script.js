@@ -88,8 +88,12 @@ document.getElementById('video-button').focus();
 
 function parallex()
 {
+    var xScrollPosition = window.scrollX;
+    var yScrollPosition = window.scrollY;
+
     ypos = window.pageYOffset;
-    document.getElementById("preview-bar").style.top = -(ypos * 1) + 'px';
+    console.log("ypos = "+ypos + "  -> yscroll = "+yScrollPosition);
+    document.getElementById("preview-bar").style.transform ="translate3d(" +xScrollPosition+(yScrollPosition*0.2) +"px,"+ yScrollPosition*(-1)+"px,0)";
 }
 window.addEventListener('scroll', parallex);
 

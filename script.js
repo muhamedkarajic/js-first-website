@@ -85,7 +85,7 @@ document.getElementById('video-button').focus();
 function parallex()
 {
     ypos = window.pageYOffset;
-    document.getElementById("preview-bar").style.top = -(ypos * 5) + 'px';
+    document.getElementById("preview-bar").style.top = -(ypos * 1) + 'px';
 }
 window.addEventListener('scroll', parallex);
 

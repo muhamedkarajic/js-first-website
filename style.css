@@ -76,7 +76,7 @@
     height: 100%;
     width: 100%;
     background-color: white;
-    
+    transition: background-color .5s linear;
     position: absolute;
     left: 0;
     top: 0;
@@ -134,6 +134,8 @@ body {
 }
 
 .container {
+    z-index: -1;
+    position: relative;
     margin: auto;
     text-align: center;
     background-color: black;
@@ -707,4 +709,12 @@ halfText p {
 {
     padding: 0;
     cursor: unset;
+}
+
+
+#preview-bar
+{
+    position: relative;
+    z-index: 100;
+    background-color: white;
 }

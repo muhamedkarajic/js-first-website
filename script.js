@@ -29,7 +29,7 @@ window.addEventListener('load', function () {
     var video = document.getElementById('video');
     var preloader = document.getElementById('overlay');
     function checkLoad() {
-        if (video.readyState === 4 || i === 60) {
+        if (video.readyState === 4) {
             //video.play();
         
             preloader.style.display = 'none';
@@ -38,13 +38,20 @@ window.addEventListener('load', function () {
                 document.getElementById('video-button').className = "fa fa-play"; 
             }
         
-        } else {
+        } 
+        else if(i === 10)
+        {
+            preloader.style.background = 'none';
+        }
+        
+        else {
                 i++;
                 setTimeout(checkLoad, 100);
         }
     }
     checkLoad();
 }, false);
+
 
 
 
@@ -85,4 +92,11 @@ const copyToClipboard = str => {
 
 
 document.getElementById('video-button').focus();
+
+function parallex()
+{
+    ypos = window.pageYOffset;
+    document.getElementById("preview-bar").style.top = -(ypos * 5) + 'px';
+}
+window.addEventListener('scroll', parallex);
 

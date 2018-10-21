@@ -39,6 +39,18 @@ function checkLoad() {
 
 video.addEventListener('canplay', checkLoad(), false);
 
+video.onwaiting = function(){
+    spinner.style.display = 'block';
+};
+video.onplaying = function(){
+    spinner.style.display = 'none';
+};
+
+
+
+
+
+
 function pauseStream() 
 {
     var video = document.getElementById('video');

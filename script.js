@@ -25,8 +25,13 @@
 
 var i = 0;
 var video = document.getElementById('video');
-var preloader = document.getElementById('overlay');
 var spinner = document.getElementById('spinner');
+if (video.readyState === 4) {
+    spinner.style.display = 'none';
+}
+
+
+var preloader = document.getElementById('overlay');
 var button = document.getElementById('video-button');
 document.getElementById("logo").classList.add("logo-animation");
 

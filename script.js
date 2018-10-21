@@ -27,14 +27,14 @@ var i = 0;
 var video = document.getElementById('video');
 var preloader = document.getElementById('overlay');
 var spinner = document.getElementById('spinner');
+var button = document.getElementById('video-button');
 document.getElementById("logo").classList.add("logo-animation");
 
 function checkLoad() {
-        preloader.style.display = 'none';
-        document.getElementById("logo").classList.add("logo-animation");
-        if (video.paused) { 
-            document.getElementById('video-button').className = "fa fa-play"; 
-        }
+    
+    preloader.style.display = 'none';
+    document.getElementById("logo").classList.add("logo-animation");
+    
 }
 
 video.addEventListener('canplay', checkLoad(), false);
@@ -45,8 +45,9 @@ video.onwaiting = function(){
 video.onplaying = function(){
     spinner.style.display = 'none';
 };
-
-
+video.onpause = function() {
+    document.getElementById('video-button').className = "fa fa-play"; 
+}; 
 
 
 
@@ -54,7 +55,6 @@ video.onplaying = function(){
 function pauseStream() 
 {
     var video = document.getElementById('video');
-    var button = document.getElementById('video-button');
 
     if (video.paused) {
         video.play();
@@ -91,4 +91,5 @@ function parallex()
     document.getElementById("preview-bar").style.top = -(ypos * 1) + 'px';
 }
 window.addEventListener('scroll', parallex);
+
 

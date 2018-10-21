@@ -27,13 +27,14 @@ var i = 0;
 window.addEventListener('load', function () {
     var video = document.getElementById('video');
     var preloader = document.getElementById('overlay');
+    var spinner = document.getElementById('spinner');
     
     preloader.style.background = 'none';
     document.getElementById("logo").classList.add("logo-animation");
 
     function checkLoad() {
         if (video.readyState === 4 || i === 60) {
-            preloader.style.display = 'none';
+            spinner.style.display = 'none';
             document.getElementById("logo").classList.add("logo-animation");
             if (video.paused) { 
                 document.getElementById('video-button').className = "fa fa-play"; 
@@ -52,20 +53,20 @@ function pauseStream()
 {
     var video = document.getElementById('video');
     var button = document.getElementById('video-button');
-    var preloader = document.getElementById('overlay');
+    var spinner = document.getElementById('spinner');
 
     if (video.paused) {
         video.play();
         button.className = "fa fa-pause";
         if(video.readyState != 4)
         {
-            preloader.style.display = 'block';
+            spinner.style.display = 'block';
         }
     }
     else {
         video.pause();
         button.className = "fa fa-play";
-        preloader.style.display = 'none';
+        spinner.style.display = 'none';
 
     }
 }

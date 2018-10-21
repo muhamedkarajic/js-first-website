@@ -27,6 +27,7 @@ var i = 0;
 window.addEventListener('load', function () {
     var video = document.getElementById('video');
     var preloader = document.getElementById('overlay');
+    preloader.style.background = 'none';
     function checkLoad() {
         if (video.readyState === 4) {
             //video.play();
@@ -41,8 +42,6 @@ window.addEventListener('load', function () {
         
         
         else {
-                console.log("Executed else....");
-                preloader.style.background = 'none';
                 console.log(i);
                 i++;
                 setTimeout(checkLoad, 100);

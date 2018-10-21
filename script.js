@@ -41,7 +41,9 @@ window.addEventListener('load', function () {
         } 
         else if(i === 10)
         {
+            i++;
             preloader.style.background = 'none';
+            setTimeout(checkLoad, 100);
         }
         
         else {

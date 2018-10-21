@@ -32,7 +32,7 @@ document.getElementById("logo").classList.add("logo-animation");
 function checkLoad() {
     i++;
     console.log(i);
-    if (video.readyState === 4 || i === 60) {
+    if (video.readyState === 4) {
         document.getElementById("logo").classList.add("logo-animation");
         if (video.paused) { 
             
@@ -45,7 +45,7 @@ function checkLoad() {
      } else {
          i++;
          preloader.style.display = 'none';
-
+        
      }
     
 }

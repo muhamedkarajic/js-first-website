@@ -27,20 +27,18 @@ var i = 0;
 window.addEventListener('load', function () {
     var video = document.getElementById('video');
     var preloader = document.getElementById('overlay');
+    
     preloader.style.background = 'none';
+
     function checkLoad() {
         if (video.readyState === 4) {
-            //video.play();
-        
+            console.log("Executed ready state....");
             preloader.style.display = 'none';
             document.getElementById("logo").classList.add("logo-animation");
             if (video.paused) { 
                 document.getElementById('video-button').className = "fa fa-play"; 
             }
-            console.log("Executed ready state....");
         } 
-        
-        
         else {
                 console.log(i);
                 i++;
@@ -49,10 +47,6 @@ window.addEventListener('load', function () {
     }
     checkLoad();
 }, false);
-
-
-
-
 
 
 function pauseStream() 

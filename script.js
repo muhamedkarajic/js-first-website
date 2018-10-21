@@ -28,6 +28,7 @@ var i = 0;
 window.addEventListener('load', function () {
     var video = document.getElementById('video');
     var preloader = document.getElementById('overlay');
+    
     function checkLoad() {
         if (video.readyState === 4) {
             //video.play();
@@ -42,8 +43,12 @@ window.addEventListener('load', function () {
         else if(i === 10)
         {
             i++;
-            preloader.style.background = 'none';
+            preloader.style.background = 'transparent';
             setTimeout(checkLoad, 100);
+            document.getElementById("logo").classList.add("logo-animation");
+            if (video.paused) { 
+                document.getElementById('video-button').className = "fa fa-play"; 
+            }
         }
         
         else {

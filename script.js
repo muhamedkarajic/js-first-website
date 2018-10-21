@@ -47,7 +47,7 @@ function checkLoad() {
     }
 }
 
-video.addEventListener('load', checkLoad(), false);
+video.addEventListener('canplay', checkLoad(), false);
 
 
 function pauseStream() 

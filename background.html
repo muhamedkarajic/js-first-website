@@ -9,39 +9,35 @@
     @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
     #cool-hover{
-        
-        width: 150vw;
-        height: 100vh;
         display: block;
-        /* box-shadow: 0 0 15px rgba(0,0,0,0.3); */
-        margin: 0px auto 24px auto;
         transition: all 0.5s;
+        width: 100vw;
+        height: 100vh;
         position: relative;
         overflow: hidden;
     }
     #cool-hover:before{
-        -webkit-animation: bgcolor 20s infinite;
-        animation: bgcolor 10s infinite;
+        -webkit-animation: bgcolor 10s infinite;
+        animation: bgcolor 5s infinite;
         -webkit-animation-direction: alternate;
         animation-direction: alternate;
         
-        border-radius: inherit;
-        display: block;
-        width: 200%;
-        height: 200%;
+        
+        width: 100vw;
+        height: 100vh;
         content: '';
         position: absolute;
         top: 0; left: 0;
-        background: linear-gradient(135deg, #21d4fd 25%, #45155c 75%);	
+
+        background: #642B73;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #C6426E, #642B73);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #C6426E, #642B73); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
         transition: all .5s;
-        transform: translate(-25%, -25%);
         z-index: 0;
     }
     #cool-hover:after{
         display: block;
-        width: 150%;
-        height: 150%;
-        margin: 6px;
         background-size: cover;
         content: '';
         position: absolute;
@@ -54,8 +50,6 @@
         0% {
             opacity: 0;
         }
-
-
         100% {
             opacity: 1;
            
@@ -65,7 +59,10 @@
         margin: 0;
         padding: 0; }
     body {
-        background: linear-gradient(-5deg, #2142fd 25%, #15425c 75%);	
+        background: #a8c0ff;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #3f2b96, #a8c0ff);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #3f2b96, #a8c0ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
         
         color: white;
         font-family: "Open Sans";
@@ -76,16 +73,19 @@
     h1{
         text-align: center;
     }
+    #center
+    {
+        position: absolute; 
+        z-index: 2; 
+        text-align: center; 
+        top: 50%; left: 50%;
+        transform: translate(-50%,-50%);
+    }
     </style>
 </head>
 
 <body >
-    <div id="cool-hover"></div>
-    <div id="cool-hover"></div>
-    <h1>WELCOME</h1>
-    <ul>Ime: Muhamed</ul>
-    <ul>Prezime: Karajic</ul>
-    <ul>Telefon: +387 60 32 94 122</ul>
-
+        <h1 id="center">HELLO WORLD</h1>
+        <div id="cool-hover"></div>
 </body>
 </html>

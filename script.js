@@ -26,22 +26,20 @@
 var i = 0;
 var video = document.getElementById('video');
 var spinner = document.getElementById('spinner');
-
-
 var preloader = document.getElementById('overlay');
 var button = document.getElementById('video-button');
-document.getElementById("logo").classList.add("logo-animation");
+
+
 
 function checkLoad() {
-    if (video.readyState === 4) {
-        spinner.style.display = 'none';
-    }
-    preloader.style.display = 'none';
+    console.log("checkLoad()");
     document.getElementById("logo").classList.add("logo-animation");
+    preloader.style.display = 'none';
+    spinner.style.display = 'none';
     
 }
 
-video.addEventListener('canplay', checkLoad(), false);
+video.oncanplay = checkLoad();
 
 video.onwaiting = function(){
     spinner.style.display = 'block';
@@ -53,17 +51,27 @@ video.onpause = function() {
     document.getElementById('video-button').className = "fa fa-play"; 
 }; 
 
+function playVideo() {
+    video.play();
+    button.className = "fa fa-pause";
+}
+
+function pauseVideo() {
+    video.pause();
+    button.className = "fa fa-play";
+}
+
+window.addEventListener('blur', pauseVideo, false);
+window.addEventListener('focus', playVideo, false);
+
 function pauseStream() 
 {
-    var video = document.getElementById('video');
-
+    window.removeEventListener('blur',pauseStream);
     if (video.paused) {
-        video.play();
-        button.className = "fa fa-pause";
+        playVideo();
     }
     else {
-        video.pause();
-        button.className = "fa fa-play";
+        pauseVideo();
     }
 }
 
@@ -86,14 +94,13 @@ const copyToClipboard = str => {
 
 document.getElementById('video-button').focus();
 var preview_bar = document.getElementById("preview-bar");
-function parallex()
-{
-    var xScrollPosition = window.scrollX;
-    var yScrollPosition = window.scrollY;
 
+var i=0;
+function parallex() {
+    var yScrollPosition = window.scrollY;
     ypos = window.pageYOffset;
-    console.log("ypos = "+ypos + "  -> yscroll = "+yScrollPosition);
-    preview_bar.style.transform ="translate3d(" +0 +"px,"+ yScrollPosition*(-1)+"px,0)";
+    //console.log("ypos = "+ypos + "  -> yscroll = "+yScrollPosition);
+    preview_bar.style.transform ="translate3d(" +0 +"px,"+ yScrollPosition*(-2)+"px,0)";
 
 }
 window.addEventListener('scroll', parallex);

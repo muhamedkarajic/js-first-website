@@ -26,7 +26,7 @@
         width: 100vw;
         height: 100vh;
         content: '';
-        position: absolute;
+        position: fixed;
         top: 0; left: 0;
 
         background: #642B73;  /* fallback for old browsers */
@@ -44,41 +44,27 @@
         top: 0; left: 0;
         z-index: 1;
     }
-    
 
     @keyframes bgcolor {
         0% {
-            opacity: 0;
+            opacity: 1;
         }
         100% {
-            opacity: 1;
+            opacity: 0;
            
         }}
-    *{
-        
-        margin: 0;
-        padding: 0; }
-    body {
-        background: #a8c0ff;  /* fallback for old browsers */
-background: -webkit-linear-gradient(to right, #3f2b96, #a8c0ff);  /* Chrome 10-25, Safari 5.1-6 */
-background: linear-gradient(to right, #3f2b96, #a8c0ff); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-
-        
-        color: white;
-        font-family: "Open Sans";
-    }
-    ul {
-        text-align: right;
-    }
-    
-    #center
+    *
     {
-        width: 80%;
-        position: absolute; 
-        z-index: 2; 
+        font-family: "Open Sans";
+        margin: 0;
+        color: white;
+        padding: 0; 
+    }#center
+    {
+        padding: 6% 0;
+        margin: 0 12%;
+        position: relative; 
         text-align: center; 
-        top: 50%; left: 50%;
-        transform: translate(-50%,-50%);
     }
     
     h1{
@@ -87,33 +73,132 @@ background: linear-gradient(to right, #3f2b96, #a8c0ff); /* W3C, IE 10+/ Edge, F
     #center p{
         text-align: justify;
     }
+
+    .color-gradient-blue{
+        background: #a8c0ff;  /* fallback for old browsers*/
+        background: -webkit-linear-gradient(to right, #3f2b96, #a8c0ff);  /*Chrome 10-25, Safari 5.1-6*/
+        background: linear-gradient(to right, #3f2b96, #a8c0ff);/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ */
+    
+    }
+
+    .color-gradient-purple{
+        background: #642B73;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #C6426E, #642B73);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #C6426E, #642B73); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    }
+
+    .fadeOut-animation
+    {
+        -webkit-animation: bgcolor 10s infinite;
+        animation: bgcolor 5s infinite;
+        animation-delay: 1s;
+        -webkit-animation-direction: alternate;
+        animation-direction: alternate;
+    }
+
+
+    .overlay
+    {
+        position:fixed;
+        width:100%;
+        height:100%;
+        top:0px;
+        left:0px;
+        z-index:-1;
+    }
+
     </style>
 </head>
 
-<body >
+<body> 
+    <div class="overlay color-gradient-purple"></div>
+    <div class="overlay color-gradient-blue fadeOut-animation"></div>
     <div id="center">
-        <h1>HELLO WORLD</h1>
-        <p>Computer science is the theory, experimentation, 
-            and engineering that form the basis for the design 
-            and use of computers. It involves the study of algorithms
-             that process, store, and communicate digital information. 
-             A computer scientist specializes in the theory of 
-             computation and the design of computational systems. 
-             Its fields can be divided into a variety of theoretical 
-             and practical disciplines. Some fields, such as computational
-              complexity theory (which explores the fundamental properties 
-              of computational and intractable problems), are highly abstract, 
-              while fields such as computer graphics emphasize real-world 
-              visual applications. 
-              Other fields focus on challenges in implementing computation. 
-              For example, programming language theory considers various 
-              approaches to the description of computation, while the study 
-              of computer programming itself investigates various aspects of 
-              the use of programming languages and complex systems. 
-              Human–computer interaction considers the challenges in making 
-              computers and computations useful, usable, and universally 
-              accessible to humans. </p>
-            </div>
-        <div id="cool-hover"></div>
+            <h1>HELLO WORLD</h1>
+            <p>Computer science is the theory, experimentation, 
+                and engineering that form the basis for the design 
+                and use of computers. It involves the study of algorithms
+                 that process, store, and communicate digital information. 
+                 A computer scientist specializes in the theory of 
+                 computation and the design of computational systems. 
+                 Its fields can be divided into a variety of theoretical 
+                 and practical disciplines. Some fields, such as computational
+                  complexity theory (which explores the fundamental properties 
+                  of computational and intractable problems), are highly abstract, 
+                  while fields such as computer graphics emphasize real-world 
+                  visual applications. 
+                  Other fields focus on challenges in implementing computation. 
+                  For example, programming language theory considers various 
+                  approaches to the description of computation, while the study 
+                  of computer programming itself investigates various aspects of 
+                  the use of programming languages and complex systems. 
+                  Human–computer interaction considers the challenges in making 
+                  computers and computations useful, usable, and universally 
+                  accessible to humans. </p>
+                  <p>Computer science is the theory, experimentation, 
+                    and engineering that form the basis for the design 
+                    and use of computers. It involves the study of algorithms
+                     that process, store, and communicate digital information. 
+                     A computer scientist specializes in the theory of 
+                     computation and the design of computational systems. 
+                     Its fields can be divided into a variety of theoretical 
+                     and practical disciplines. Some fields, such as computational
+                      complexity theory (which explores the fundamental properties 
+                      of computational and intractable problems), are highly abstract, 
+                      while fields such as computer graphics emphasize real-world 
+                      visual applications. 
+                      Other fields focus on challenges in implementing computation. 
+                      For example, programming language theory considers various 
+                      approaches to the description of computation, while the study 
+                      of computer programming itself investigates various aspects of 
+                      the use of programming languages and complex systems. 
+                      Human–computer interaction considers the challenges in making 
+                      computers and computations useful, usable, and universally 
+                      accessible to humans. </p>
+                      <p>Computer science is the theory, experimentation, 
+                        and engineering that form the basis for the design 
+                        and use of computers. It involves the study of algorithms
+                         that process, store, and communicate digital information. 
+                         A computer scientist specializes in the theory of 
+                         computation and the design of computational systems. 
+                         Its fields can be divided into a variety of theoretical 
+                         and practical disciplines. Some fields, such as computational
+                          complexity theory (which explores the fundamental properties 
+                          of computational and intractable problems), are highly abstract, 
+                          while fields such as computer graphics emphasize real-world 
+                          visual applications. 
+                          Other fields focus on challenges in implementing computation. 
+                          For example, programming language theory considers various 
+                          approaches to the description of computation, while the study 
+                          of computer programming itself investigates various aspects of 
+                          the use of programming languages and complex systems. 
+                          Human–computer interaction considers the challenges in making 
+                          computers and computations useful, usable, and universally 
+                          accessible to humans. </p>
+                          <p>Computer science is the theory, experimentation, 
+                            and engineering that form the basis for the design 
+                            and use of computers. It involves the study of algorithms
+                             that process, store, and communicate digital information. 
+                             A computer scientist specializes in the theory of 
+                             computation and the design of computational systems. 
+                             Its fields can be divided into a variety of theoretical 
+                             and practical disciplines. Some fields, such as computational
+                              complexity theory (which explores the fundamental properties 
+                              of computational and intractable problems), are highly abstract, 
+                              while fields such as computer graphics emphasize real-world 
+                              visual applications. 
+                              Other fields focus on challenges in implementing computation. 
+                              For example, programming language theory considers various 
+                              approaches to the description of computation, while the study 
+                              of computer programming itself investigates various aspects of 
+                              the use of programming languages and complex systems. 
+                              Human–computer interaction considers the challenges in making 
+                              computers and computations useful, usable, and universally 
+                              accessible to humans. </p>
+                </div>
 </body>
+
+
+
 </html>

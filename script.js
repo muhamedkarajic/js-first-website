@@ -99,7 +99,7 @@ var block2 = document.getElementById("block2");
 
 block1.style.width = "100px";
 block1.style.height = "100px";
-block1.style.left = "400px";
+block1.style.left = "70%";
 
 // block3.style.width = "25px";
 // block3.style.height = "25px";

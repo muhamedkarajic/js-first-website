@@ -93,14 +93,36 @@ const copyToClipboard = str => {
 
 
 document.getElementById('video-button').focus();
-var preview_bar = document.getElementById("preview-bar");
+var block1 = document.getElementById("block1");
+var block2 = document.getElementById("block2");
+// var block3 = document.getElementById("block3");
+
+block1.style.width = "100px";
+block1.style.height = "100px";
+block1.style.left = "400px";
+
+// block3.style.width = "25px";
+// block3.style.height = "25px";
+// block3.style.left = "200px";
 
 var i=0;
 function parallex() {
     var yScrollPosition = window.scrollY;
     ypos = window.pageYOffset;
     //console.log("ypos = "+ypos + "  -> yscroll = "+yScrollPosition);
-    preview_bar.style.transform ="translate3d(" +0 +"px,"+ yScrollPosition*(-2)+"px,0)";
+    block1.style.transform ="translate3d(" +0 +"px,"+ yScrollPosition*(-2)+"px,0)";
+    block1.style.webkitTransform += "rotateZ("+ yScrollPosition*(.25)+"deg)";
+
+    block2.style.transform ="translate3d(" +0 +"px,"+ yScrollPosition*(-.76)+"px,0)";
+    block2.style.webkitTransform += "rotateZ("+ yScrollPosition*(-.35)+"deg)";
+    block2.style.borderRadius = yScrollPosition*(.028)+"px";
+    block1.style.borderRadius = yScrollPosition*(.028)+"px";
+
+
+    // block3.style.transform ="translate3d(" +0 +"px,"+ yScrollPosition*(-.5)+"px,0)";
+    // block3.style.webkitTransform += "rotateZ("+ yScrollPosition*(-.1)+"deg)";
+
+
 
 }
 window.addEventListener('scroll', parallex);

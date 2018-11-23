@@ -708,16 +708,18 @@ halfText p {
 }
 
 
-#preview-bar
+.preview-bar
 {
-    height: 20px;
-    width: 20px;
+    height: 50px;
+    width: 50px;
     opacity: .85 ;
+    position: relative;
+    left: 50px;
+    bottom: -200px;
     z-index: 4;
-    background-color: rgb(255, 255, 255);
     transform: translate3d(0,0,0);
-    padding-bottom: 40px;
-    background-color: white;
+    box-shadow: 5px 10px 10px;
+    background-color: #a50820;
     /* background-image: url(https://hdqwalls.com/download/polygonal-abstract-red-dark-background-eo-2048x1152.jpg); */
 }
 

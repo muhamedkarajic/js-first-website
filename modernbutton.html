@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Test</title>
+    <style>
+    @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+    #cool-hover{
+        display: block;
+        transition: all 0.5s;
+        width: 100vw;
+        height: 100vh;
+        position: relative;
+        overflow: hidden;
+    }
+    #cool-hover:before{
+        -webkit-animation: bgcolor 10s infinite;
+        animation: bgcolor 5s infinite;
+        -webkit-animation-direction: alternate;
+        animation-direction: alternate;
+        
+        
+        width: 100vw;
+        height: 100vh;
+        content: '';
+        position: fixed;
+        top: 0; left: 0;
+
+        background: #642B73;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #C6426E, #642B73);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #C6426E, #642B73); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+        transition: all .5s;
+        z-index: 0;
+    }
+    #cool-hover:after{
+        display: block;
+        background-size: cover;
+        content: '';
+        position: absolute;
+        top: 0; left: 0;
+        z-index: 1;
+    }
+
+    @keyframes bgcolor {
+        0% {
+            opacity: 1;
+        }
+        100% {
+            opacity: 0;
+           
+        }}
+    *
+    {
+        font-family: "Open Sans";
+        margin: 0;
+        color: white;
+        padding: 0; 
+    }#center
+    {
+        background-color:rgba(0, 0, 0, 0.2);
+        padding: 2% 4%;
+        margin: 0 12%;
+        position: relative; 
+        text-align: center; 
+    }
+    
+    h1{
+        padding-bottom: 25px;
+    }
+    #center p{
+        text-align: justify;
+    }
+
+    .color-gradient-blue{
+        background: #a8c0ff;  /* fallback for old browsers*/
+        background: -webkit-linear-gradient(to right, #3f2b96, #a8c0ff);  /*Chrome 10-25, Safari 5.1-6*/
+        background: linear-gradient(to right, #3f2b96, #a8c0ff);/* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */ */
+    
+    }
+
+    .color-gradient-purple{
+        background: #642B73;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to right, #C6426E, #642B73);  /* Chrome 10-25, Safari 5.1-6 */
+        background: linear-gradient(to right, #C6426E, #642B73); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+    }
+
+
+    .fadeOut-animation
+    {
+        -webkit-animation: bgcolor 10s infinite;
+        animation: bgcolor 5s infinite;
+        animation-delay: 1s;
+        -webkit-animation-direction: alternate;
+        animation-direction: alternate;
+    }
+
+
+    .overlay
+    {
+        position:fixed;
+        width:200px;
+        height:70px;
+        border-radius: 35px;
+        top:0px;
+        left:0px;
+        z-index:-1;
+    }
+    .center{
+        top: 50%; 
+        left: 50%;
+        position: relative;
+        text-align: center;
+        transform: translate3d(-50%,-50%, 0);
+    }
+    .test
+    {
+        border: red solid 7px;
+    }
+
+    </style>
+</head>
+
+<body style="width: 100vw; height: 100vh"> 
+    <!-- <div class="overlay" style="background-image: url(http://www.printawallpaper.com/upload/designs/coffee_at_work_detail.jpg);"></div> -->
+    <div class="overlay center">
+        <div class="overlay color-gradient-purple"></div>
+        <div class="overlay color-gradient-blue fadeOut-animation"></div>
+        <div class="center"><p>Modern Button!</p></div>
+    </div>
+</body>
+
+
+
+</html>

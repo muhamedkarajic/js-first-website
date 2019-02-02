@@ -580,7 +580,7 @@ halfText p {
     float: right;
     right: 5%;
     cursor: pointer;
-    transition: background-color .25s ease-in;
+    transition:  .25s ease-in;
 }
 
 

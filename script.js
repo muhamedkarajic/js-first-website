@@ -1,11 +1,24 @@
+var i = 0;
+var video = document.getElementById('video');
+var spinner = document.getElementById('spinner');
+var preloader = document.getElementById('overlay');
+var button = document.getElementById('video-button');
+
+var size = {
+    width: window.innerWidth || document.body.clientWidth,
+    height: window.innerHeight || document.body.clientHeight
+    
+}
+
+
 var phone = false;
-if(window.innerWidth < document.body.clientWidth)
+if(size.width < size.height)
     phone = true;
 updateVideo();
 
 
 function updateVideo(){
-    var size = {
+    size = {
         width: window.innerWidth || document.body.clientWidth,
         height: window.innerHeight || document.body.clientHeight
     }
@@ -13,26 +26,15 @@ function updateVideo(){
     if(size.width < size.height && !phone)
     {
         phone = true;
-        document.getElementById('video').src = "phone.mp4#t=0.5";
+        document.getElementById('video').src = "phone.mp4#t=0.1";
     }    
     else if(size.width > size.height && phone)
     {
         phone = false;
-        document.getElementById('video').src = "intro.mp4#t=0.5";
+        document.getElementById('video').src = "intro.mp4#t=0.1";
     }
+
 }
-
-
-
-
-
-var i = 0;
-var video = document.getElementById('video');
-var spinner = document.getElementById('spinner');
-var preloader = document.getElementById('overlay');
-var button = document.getElementById('video-button');
-
-
 
 function checkLoad() {
     console.log("checkLoad()");
@@ -51,7 +53,21 @@ video.onplaying = function(){
 };
 video.onpause = function() {
     document.getElementById('video-button').className = "fa fa-play"; 
-}; 
+};
+
+function playPause()
+{ 
+    if (video.paused) 
+    {
+        video.play();
+        button.className = "fa fa-pause";
+    }
+    else 
+    {
+        video.pause();
+        button.className = "fa fa-play";
+    }
+}
 
 function playVideo() {
     video.play();
@@ -76,7 +92,6 @@ function pauseStream()
         pauseVideo();
     }
 }
-
 
 const copyToClipboard = str => {
     const el = document.createElement('textarea');
@@ -108,8 +123,11 @@ block1.style.left = "70%";
 // block3.style.left = "200px";
 
 var i=0;
+
+var yScrollPosition = window.scrollY;
 function parallex() {
-    var yScrollPosition = window.scrollY;
+    yScrollPosition = window.scrollY
+    CheckVideo();
     ypos = window.pageYOffset;
     //console.log("ypos = "+ypos + "  -> yscroll = "+yScrollPosition);
     block1.style.transform ="translate3d(" +0 +"px,"+ yScrollPosition*(-2)+"px,0)";
@@ -128,3 +146,14 @@ function parallex() {
 
 }
 window.addEventListener('scroll', parallex);
+
+
+function CheckVideo()
+{
+    console.log(yScrollPosition*2 +">"+ size.height);
+    if((yScrollPosition*2) > size.height)
+        pauseVideo();
+    else
+        playVideo();
+}
+

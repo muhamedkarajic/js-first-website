@@ -1,26 +1,29 @@
-// var video = document.getElementById('video');
-// var preloader = document.getElementById('overlay');
-// var i = 0;
+var phone = false;
+if(window.innerWidth < document.body.clientWidth)
+    phone = true;
+updateVideo();
 
 
-// function checkLoad() {
-//     // console.log(i);
+function updateVideo(){
+    var size = {
+        width: window.innerWidth || document.body.clientWidth,
+        height: window.innerHeight || document.body.clientHeight
+    }
+    console.log(size.width +"x"+ size.height);
+    if(size.width < size.height && !phone)
+    {
+        phone = true;
+        document.getElementById('video').src = "phone.mp4";
+    }    
+    else if(size.width > size.height && phone)
+    {
+        phone = false;
+        document.getElementById('video').src = "intro.mp4";
+    }
+}
 
-//     if (video.readyState === 4 || i === 60) {
-        
-//         preloader.style.display = 'none';
-        
-//         document.getElementById("logo").classList.add("logo-animation");
-//         if (video.paused) { 
-//             document.getElementById('video-button').className = "fa fa-play"; 
-//         }
-        
-//     } else {
-//         i++;
-//         setTimeout(checkLoad, 100);
-//     }
-// };
-// checkLoad();
+
+
 
 
 var i = 0;
@@ -36,7 +39,6 @@ function checkLoad() {
     document.getElementById("logo").classList.add("logo-animation");
     preloader.style.display = 'none';
     spinner.style.display = 'none';
-    
 }
 
 video.oncanplay = checkLoad();
@@ -126,5 +128,3 @@ function parallex() {
 
 }
 window.addEventListener('scroll', parallex);
-
-

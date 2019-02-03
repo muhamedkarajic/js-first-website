@@ -13,12 +13,12 @@ function updateVideo(){
     if(size.width < size.height && !phone)
     {
         phone = true;
-        document.getElementById('video').src = "phone.mp4";
+        document.getElementById('video').src = "phone.mp4#t=0.5";
     }    
     else if(size.width > size.height && phone)
     {
         phone = false;
-        document.getElementById('video').src = "intro.mp4";
+        document.getElementById('video').src = "intro.mp4#t=0.5";
     }
 }
 

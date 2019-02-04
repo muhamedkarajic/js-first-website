@@ -113,6 +113,11 @@ const copyToClipboard = str => {
     }, 2000);
 };
 
+function isMobileDevice() {
+    return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+};
+
+
 
 document.getElementById('video-button').focus();
 var block1 = document.getElementById("block1");

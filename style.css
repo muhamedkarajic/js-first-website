@@ -712,7 +712,7 @@ halfText p {
 {
     height: 50px;
     width: 50px;
-    opacity: .85 ;
+    opacity: 0.85;
     position: absolute;
     left: 50px;
     bottom: -200px;

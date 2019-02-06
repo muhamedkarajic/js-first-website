@@ -9,6 +9,9 @@ var size = {
     height: window.innerHeight || document.body.clientHeight
 }
 
+console.log(size.width +"x"+ size.height);
+
+
 var buttonPress = false;
 var phone = true;
 if(size.width < size.height)

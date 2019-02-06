@@ -10,9 +10,9 @@ var size = {
 }
 
 var buttonPress = false;
-var phone = false;
+var phone = true;
 if(size.width < size.height)
-    phone = true;
+    phone = false;
 updateVideo();
 
 
@@ -25,8 +25,7 @@ function updateVideo(){
     if(size.width < size.height && !phone)
     {
         phone = true;
-        // document.getElementById('video').src = "phone.mp4#t=0.1";
-        document.getElementById('video').src = "intro.mp4#t=0.1";
+        document.getElementById('video').src = "phone.mp4#t=0.1";
     }    
     else if(size.width > size.height && phone)
     {
@@ -79,13 +78,13 @@ function pauseVideo() {
     button.className = "fa fa-play";
 }
 
-window.addEventListener('blur', pauseVideo, false);
-window.addEventListener('focus', playVideo, false);
+window.addEventListener('blur', pauseVideo);
+window.addEventListener('focus', playVideo);
 
 function pauseStream() 
 {
-    window.removeEventListener('blur',pauseStream);
-    window.removeEventListener('focuse',playVideo);
+    //window.removeEventListener('blur',pauseVideo);
+    window.removeEventListener('focus',playVideo);
     //window.removeEventListener('scroll', parallex);
 
     if (video.paused) {

@@ -6,6 +6,38 @@
 
 }
 
+
+.fadeIn-animation
+{
+    animation: bgcolorIn 1s forwards;
+}
+
+.fadeOut-animation
+{
+    animation: bgcolorOut 1s forwards;
+}
+
+
+@keyframes bgcolorIn {
+0% {
+    opacity: 0;
+}
+100% {
+    opacity: 1;
+   
+}}
+
+
+@keyframes bgcolorOut {
+0% {
+    opacity: 1;
+}
+100% {
+    opacity: 0;
+   
+}}
+
+
 .clearFix
 {
     content: '';
@@ -218,6 +250,13 @@ body {
     margin: 0 0%;
 }
 
+#gallaryImage
+{
+    background-image: none;
+    background-color: rgb(3, 2, 11);;
+    background-size: cover;
+}
+
 .box-wrapper h3 {
     color: #F1693B;
     padding: 10px 0;
@@ -253,6 +292,7 @@ body {
 }
 
 .row {
+    
     display: flex;
     flex-wrap: wrap;
     padding: 0 4px;

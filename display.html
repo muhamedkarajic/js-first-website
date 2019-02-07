@@ -10,39 +10,14 @@
         img{
             transition: 1s;
         }
-        .fadeIn-animation
-        {
-            animation: bgcolorIn 1s forwards;
-        }
-
-        .fadeOut-animation
-        {
-            animation: bgcolorOut 1s forwards;
-        }
 
         #container2
         {
             opacity: 0;
             transform: 2s;
         }
-        @keyframes bgcolorIn {
-        0% {
-            opacity: 0;
-        }
-        100% {
-            opacity: 1;
-           
-        }}
 
 
-        @keyframes bgcolorOut {
-        0% {
-            opacity: 1;
-        }
-        100% {
-            opacity: 0;
-           
-        }}
 
     
     </style>
@@ -54,9 +29,7 @@
             <div id="container2" class="fadeOut-animation" style="width: 1000px; height: 600px; background-color: gray; position: absolute; background-size: 100%;"></div>
             <img onmouseover="bigImg(this)" onmouseout="normalImg(this)" src="https://picsum.photos/500/500?image=10" style="position: absolute;">
     </div>
-    
 </body>
-
 
 
 <script>

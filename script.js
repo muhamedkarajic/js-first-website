@@ -213,6 +213,20 @@ function fadeInImage()
     newImage = false;   
 }
 
+var lastValue = 1;
+function updateDesignVideo(x)
+{
+    if(x == lastValue)
+        retrun;
+    var designVideo = document.getElementById("designVideo");
+    if(x == 1)
+        designVideo.src = "ae.mp4";
+    else
+        designVideo.src = "intro.mp4#t=0.1";
+    lastValue = x;
+}
+
+
 function noneImage()
 {
     firstImage = true;

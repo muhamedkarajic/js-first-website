@@ -333,6 +333,7 @@ body {
     filter: grayscale(90%) blur(1.0px);
     filter: gray;
     z-index: 0;
+    opacity: 0.3;
     transition: transform .7s, filter .7s, opacity .7s;
     position: relative;
     background: red;

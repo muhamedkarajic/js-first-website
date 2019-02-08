@@ -186,7 +186,6 @@ function CheckVideo()
 var newImage = false;
 var firstImage = true;
 var gallaryImage = document.getElementById('gallaryImage');
-
 var lastURL = "none";
 
 function imageUpdate(x) {
@@ -195,14 +194,14 @@ function imageUpdate(x) {
     if(newImage == false)
     {
         if(firstImage == true)
-    {
-        fadeInImage();
-        firstImage = false;
-    }
-    else{
-        newImage = true;
-        setTimeout(fadeInImage, 1000);
-    }
+        {
+            fadeInImage();
+            firstImage = false;
+        }
+        else{
+            newImage = true;
+            setTimeout(fadeInImage, 1000);
+        }
     }
 }
 
@@ -211,12 +210,14 @@ function fadeInImage()
     gallaryImage.classList.remove("fadeOut-animation");
     gallaryImage.classList.add("fadeIn-animation");
     gallaryImage.style.backgroundImage = lastURL;
-    newImage = false;
+    newImage = false;   
 }
 
 function noneImage()
 {
     firstImage = true;
+    lastURL = "none";
+    gallaryImage.classList.remove("fadeIn-animation");
 }
 
 function imageDelete(x) {

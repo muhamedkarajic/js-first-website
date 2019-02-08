@@ -243,17 +243,27 @@ body {
 
 .box-wrapper {
     margin: 0 6%;
-    padding-bottom: 120px;
+    padding: 6% 0;
 }
 
 .box0 {
     margin: 0 0%;
 }
+#gallaryContainer
+{
+    position: relative;
+    background-image: none;
+    background-color: rgb(3, 2, 11);
+    background-size: cover;
+}
 
 #gallaryImage
 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
     background-image: none;
-    background-color: rgb(3, 2, 11);;
+    background-color: rgb(3, 2, 11);
     background-size: cover;
 }
 
@@ -323,7 +333,6 @@ body {
     filter: grayscale(90%) blur(1.0px);
     filter: gray;
     z-index: 0;
-    opacity: 0.3;
     transition: transform .7s, filter .7s, opacity .7s;
     position: relative;
     background: red;
@@ -338,7 +347,7 @@ body {
     transition: transform .3s, filter .3s, opacity .3s;
     /* Animation */
     
-    transform: scale3d(1.1,1.1,1);
+    /* transform: scale3d(1.1,1.1,1); */
     -webkit-filter: grayscale(0%) blur(0px);
     -moz-filter: grayscale(0%) blur(0px);
     -ms-filter: grayscale(0%) blur(0px);

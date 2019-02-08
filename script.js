@@ -185,14 +185,13 @@ function CheckVideo()
 var gallaryImage = document.getElementById('gallaryImage');
 function imageUpdate(x) {
     gallaryImage.style.backgroundImage = "url('"+x.src+"')";
-    // gallaryImage.classList.remove("fadeOut-animation");
-    // gallaryImage.classList.add("fadeIn-animation");
+    gallaryImage.classList.remove("fadeOut-animation");
+    gallaryImage.classList.add("fadeIn-animation");
 }
 
-
 function imageDelete(x) {
-    // gallaryImage.classList.remove("fadeIn-animation");
-    // gallaryImage.classList.add("fadeOut-animation");
+    gallaryImage.classList.remove("fadeIn-animation");
+    gallaryImage.classList.add("fadeOut-animation");
 }
 
 

@@ -182,11 +182,41 @@ function CheckVideo()
     }
 }
 
+
+var newImage = false;
+var firstImage = true;
 var gallaryImage = document.getElementById('gallaryImage');
+
+var lastURL = "none";
+
 function imageUpdate(x) {
-    gallaryImage.style.backgroundImage = "url('"+x.src+"')";
+    gallaryImage.classList.add("fadeOut-animation");
+    lastURL = "url('"+x.src+"')";
+    if(newImage == false)
+    {
+        if(firstImage == true)
+    {
+        fadeInImage();
+        firstImage = false;
+    }
+    else{
+        newImage = true;
+        setTimeout(fadeInImage, 1000);
+    }
+    }
+}
+
+function fadeInImage()
+{
     gallaryImage.classList.remove("fadeOut-animation");
     gallaryImage.classList.add("fadeIn-animation");
+    gallaryImage.style.backgroundImage = lastURL;
+    newImage = false;
+}
+
+function noneImage()
+{
+    firstImage = true;
 }
 
 function imageDelete(x) {

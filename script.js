@@ -100,7 +100,7 @@ function pauseVideo() {
 }
 
 window.addEventListener('blur', pauseVideo);
-window.addEventListener('focus', playVideo);
+window.addEventListener('focus', CheckVideo);
 
 function pauseStream() 
 {

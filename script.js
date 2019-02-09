@@ -53,6 +53,9 @@ function checkLoad() {
     spinner.style.display = 'none';
     if(video.playing)
         button.className = "fa fa-pause";
+    else
+        button.className = "fa fa-play";
+
 }
 
 video.oncanplay = checkLoad;

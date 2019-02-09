@@ -51,11 +51,8 @@ function checkLoad() {
     document.getElementById("logo").classList.add("logo-animation");
     preloader.style.display = 'none';
     spinner.style.display = 'none';
-    if(video.playing)
+    if(!video.paused)
         button.className = "fa fa-pause";
-    else
-        button.className = "fa fa-play";
-
 }
 
 video.oncanplay = checkLoad;

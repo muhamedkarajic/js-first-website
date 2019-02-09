@@ -44,7 +44,7 @@ var buttonPress = false;
 var phone = true;
 if(size.width < size.height)
     phone = false;
-updateVideo();
+// updateVideo();
 
 
 function checkLoad() {

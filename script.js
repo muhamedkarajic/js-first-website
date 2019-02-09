@@ -12,18 +12,11 @@ var size = {
 
 
 
-
-
-
-console.log(size.width +"x"+ size.height);
-
-
-var buttonPress = false;
-var phone = true;
-if(size.width < size.height)
-    phone = false;
-// updateVideo();
-
+Object.defineProperty(HTMLMediaElement.prototype, 'playing', {
+    get: function(){
+        return !!(this.currentTime > 0 && !this.paused && !this.ended && this.readyState > 2);
+    }
+})
 
 function updateVideo(){
     size = {
@@ -43,17 +36,27 @@ function updateVideo(){
     }
 }
 
+
+console.log(size.width +"x"+ size.height);
+
+
+var buttonPress = false;
+var phone = true;
+if(size.width < size.height)
+    phone = false;
+updateVideo();
+
+
 function checkLoad() {
     document.getElementById("logo").classList.add("logo-animation");
     preloader.style.display = 'none';
     spinner.style.display = 'none';
-    button.className = "fa fa-pause";
+    if(video.playing)
+        button.className = "fa fa-pause";
 }
 
-video.oncanplay = function(){
-    checkLoad();
-};
-
+video.oncanplay = checkLoad;
+video.onloadedmetadata = checkLoad;
 video.onwaiting = function(){
     spinner.style.display = 'block';
 };

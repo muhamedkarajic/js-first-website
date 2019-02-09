@@ -22,7 +22,7 @@ var buttonPress = false;
 var phone = true;
 if(size.width < size.height)
     phone = false;
-updateVideo();
+// updateVideo();
 
 
 function updateVideo(){
@@ -50,7 +50,9 @@ function checkLoad() {
     button.className = "fa fa-pause";
 }
 
-video.oncanplay = checkLoad;
+video.oncanplay = function(){
+    checkLoad();
+};
 
 video.onwaiting = function(){
     spinner.style.display = 'block';

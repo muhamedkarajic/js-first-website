@@ -4,6 +4,21 @@ var spinner = document.getElementById('spinner');
 var preloader = document.getElementById('overlay');
 var button = document.getElementById('video-button');
 
+video.oncanplay = checkLoad;
+
+if(!video.paused)
+    checkLoad();
+function checkLoad() {
+    console.log("Video is now playing!");
+    document.getElementById("logo").classList.add("logo-animation");
+    preloader.style.display = 'none';
+    spinner.style.display = 'none';
+    if(!video.paused)
+        button.className = "fa fa-pause";
+}
+
+
+
 var size = {
     width: window.innerWidth || document.body.clientWidth,
     height: window.innerHeight || document.body.clientHeight
@@ -47,15 +62,8 @@ if(size.width < size.height)
 // updateVideo();
 
 
-function checkLoad() {
-    document.getElementById("logo").classList.add("logo-animation");
-    preloader.style.display = 'none';
-    spinner.style.display = 'none';
-    if(!video.paused)
-        button.className = "fa fa-pause";
-}
 
-video.oncanplay = checkLoad;
+
 video.onloadedmetadata = checkLoad;
 video.onwaiting = function(){
     spinner.style.display = 'block';

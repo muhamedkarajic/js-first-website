@@ -47,7 +47,7 @@
             <div class="tooltip">
                 <button onclick="copyToClipboard()" class="fa fa-skype"><span id="testing" class="tooltiptext">Username copied!</span></button>
             </div>
-            <button id="video-button" onclick="pauseStream()" class="fa fa-pause"></button>
+            <button id="video-button" onclick="pauseStream()" class="fa fa-play"></button>
 			
     </div>
     
@@ -55,9 +55,8 @@
 
     <header class="v-header container ">
         <div class="fullscreen-video-wrap ">
-            <video id="video" autoplay="autoplay" loop="loop" muted="muted" volume="0 " preload="auto">
+            <video id="video" loop="loop" muted="muted" volume="0 " preload="auto" autoplay = "false">
                 <source src="intro.mp4" media="only screen and (min-device-width: 568px)" > 
-                <source src="phone.mp4" media="only screen and (max-device-width: 568px)"> 
                 <!-- <source src="video.webm">  -->
             </video>
         </div>

@@ -177,15 +177,6 @@ body {
     z-index: 1;
     color: #fff;
 }
-
-.container {
-    z-index: -1;
-    position: relative;
-    margin: auto;
-    text-align: center;
-    background-color: white;
-}
-
 .fullscreen-video-wrap {
     top: 0;
     left: 0;

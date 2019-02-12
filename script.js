@@ -8,8 +8,8 @@ video.oncanplay = checkLoad;
 
 if(!video.paused)
     checkLoad();
+
 function checkLoad() {
-    console.log("Video is now playing!");
     document.getElementById("logo").classList.add("logo-animation");
     preloader.style.display = 'none';
     spinner.style.display = 'none';
@@ -64,7 +64,8 @@ if(size.width < size.height)
 
 
 
-video.onloadedmetadata = checkLoad;
+// video.onloadedmetadata = checkLoad;
+video.oncanplay = checkLoad;
 video.onwaiting = function(){
     spinner.style.display = 'block';
 };
@@ -73,6 +74,9 @@ video.onplaying = function(){
 };
 video.onpause = function() {
     document.getElementById('video-button').className = "fa fa-play"; 
+};
+video.onplay = function() {
+    button.className = "fa fa-pause"; 
 };
 
 function playPause()
@@ -98,6 +102,8 @@ function pauseVideo() {
     video.pause();
     button.className = "fa fa-play";
 }
+
+
 
 window.addEventListener('blur', pauseVideo);
 window.addEventListener('focus', CheckVideo);
@@ -259,3 +265,4 @@ document.addEventListener('keydown', function(e){
             e.preventDefault();
         }
 } );
+

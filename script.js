@@ -102,11 +102,16 @@ function pauseVideo() {
 window.addEventListener('blur', pauseVideo);
 window.addEventListener('focus', CheckVideo);
 
+var playAnyway = false;
+
 function pauseStream() 
 {
     //window.removeEventListener('blur',pauseVideo);
-    window.removeEventListener('focus',playVideo);
     //window.removeEventListener('scroll', parallex);
+    window.removeEventListener('focus',playVideo);
+
+    if(offset*2 > size.height && !playAnyway)
+        playAnyway = true;
 
     if (video.paused) {
         playVideo();
@@ -165,12 +170,6 @@ function parallex() {
 
     block1.style.transform ="translate3d(" + 0 + "px," +    offset*(-2) +   "px,    0)";
     block2.style.transform ="translate3d(" + 0 + "px," +    offset*(-.76) + "px,    0)";
-    
-    
-    
-    //block1.style.backgroundPositionY = (offset * (-2)) + "px";
-
-    //block2.style.backgroundPositionY = (offset * (-0.76)) + "px";
 
     block1.style.webkitTransform += "rotateZ("+ offset*(.25)+"deg)";
 
@@ -183,16 +182,15 @@ window.addEventListener('scroll', parallex, false);
 
 function CheckVideo()
 {
-    if(offset*2 > size.height)
-    {
+    if(offset*2 > size.height && !playAnyway)
         pauseVideo();
-        //document.getElementById('video-button').focus();
-    }
     else if(offset*2 < size.height  && !buttonPress)
     {
         playVideo();
-        //document.getElementById('video-button').focus();
+        playAnyway = false;
     }
+    else if(offset > size.height)
+        pauseVideo();
 }
 
 
@@ -229,16 +227,16 @@ function fadeInImage()
 var lastValue = 1;
 function updateDesignVideo(x)
 {
-    if(x == lastValue)
-        retrun;
-    var designVideo = document.getElementById("designVideo");
-    if(x == 1)
-        designVideo.src = "ae.mp4";
-    else
-        designVideo.src = "intro.mp4#t=0.1";
-    lastValue = x;
+    if(x != lastValue)
+    {
+        var designVideo = document.getElementById("designVideo");
+        if(x == 1)
+            designVideo.src = "ae.mp4#t=0.1";
+        else
+            designVideo.src = "intro.mp4#t=0.1";
+        lastValue = x;
+    }
 }
-
 
 function noneImage()
 {
@@ -252,15 +250,12 @@ function imageDelete(x) {
     gallaryImage.classList.add("fadeOut-animation");
 }
 
-
-
-
-// document.addEventListener('keydown', function(e){
-//     var key = e.keyCode ? e.keyCode : e.which;
-//     if(offset*2 < size.height)
-//         if (key == 32)
-//         {
-//             pauseStream();
-//             e.preventDefault();
-//         }
-// } );
+document.addEventListener('keydown', function(e){
+    var key = e.keyCode ? e.keyCode : e.which;
+    if(offset*2 < size.height)
+        if (key == 32)
+        {
+            pauseStream();
+            e.preventDefault();
+        }
+} );

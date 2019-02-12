@@ -82,14 +82,9 @@ video.onplay = function() {
 function playPause()
 { 
     if (video.paused) 
-    {
         video.play();
-    }
     else 
-    {
         video.pause();
-        button.className = "fa fa-play";
-    }
 }
 
 function playVideo() {
@@ -98,16 +93,12 @@ function playVideo() {
 
 function pauseVideo() {
     video.pause();
-    
 }
-
-
 
 window.addEventListener('blur', pauseVideo);
 window.addEventListener('focus', CheckVideo);
 
 var playAnyway = false;
-
 function pauseStream() 
 {
     //window.removeEventListener('blur',pauseVideo);

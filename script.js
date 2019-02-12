@@ -84,7 +84,6 @@ function playPause()
     if (video.paused) 
     {
         video.play();
-        button.className = "fa fa-pause";
     }
     else 
     {
@@ -95,12 +94,11 @@ function playPause()
 
 function playVideo() {
     video.play();
-    button.className = "fa fa-pause";
 }
 
 function pauseVideo() {
     video.pause();
-    button.className = "fa fa-play";
+    
 }
 
 

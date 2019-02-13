@@ -9,15 +9,23 @@
 
 .fadeIn-animation
 {
-    animation: bgcolorIn 1s forwards;
+    animation: bgcolorIn .75s forwards;
 }
 
 .fadeOut-animation
 {
-    animation: bgcolorOut 1s forwards;
+    animation: bgcolorOut .75s forwards;
 }
 
-
+@keyframes scaleImage {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.15);
+       
+    }
+}
 @keyframes bgcolorIn {
 0% {
     opacity: 0;
@@ -58,11 +66,11 @@
     padding-top: 30px;
     padding-bottom: 30px;
     position: relative;
+    /* border: 1px solid black; */
     /* -moz-box-shadow: inset 0 0 20px #000000;
     -webkit-box-shadow: inset 0 0 20px #000000;
     box-shadow: inset 0 0 20px #000000;
      */
-    color: #d190fc;
     /* background-color: #1E0C36;
     background-image: url(https://mir-s3-cdn-cf.behance.net/project_modules/fs/b2829c29329691.55ee1317c58f1.jpg);
     background-blend-mode: luminosity;
@@ -70,19 +78,38 @@
     text-shadow: 4px 4px 4px black; */
     text-align: justify;
     width: 25%;
+    
     background-size: cover;
-
-    filter: grayscale(30%);
-    filter: brightness(.5);
-    transition: all 0.5s ease-in;
+    opacity: .0 ;
+    transition: opacity .45s ease-in;
 }
+/* Programmers start at zero, no programmers start at 1 and my website starts at 2 */
 
+
+.columnView:nth-child(2)
+{
+    color: #d190fc;
+    background-color: rgba(30, 12, 54, .8);
+}
+.columnView:nth-child(3)
+{
+    color: #EB77FF; 
+    background-color: rgba(43, 0, 53, .8);
+}
+.columnView:nth-child(4)
+{
+    color: #FF7900; 
+    background-color: rgba(38, 20, 0, .8);
+}
+.columnView:nth-child(5)
+{
+    color: #00C9FF; 
+    background-color: rgba(0, 29, 37, .8);
+}
 
 .columnView:hover{
-    filter: grayscale(0);
-    filter: brightness(1);
+    opacity: 1;
 }
-
 .columnView h2 {
     display: table-cell;
     width: 50px;
@@ -101,11 +128,9 @@
     padding-left: 30px;
 }
 
-
 .columnView p {
-
     padding: 4px 30px;
-
+    transition: opacity .5s ease-in;
 }
 
 #overlay {
@@ -250,6 +275,7 @@ body {
 .box-wrapper {
     margin: 0 6%;
     padding: 6% 0;
+    position: relative;
 }
 
 .box0 {
@@ -274,6 +300,7 @@ body {
     background-color: rgb(3, 2, 11);
     background-size: cover;
     transition: 4s;
+
 }
 
 .box-wrapper h3 {
@@ -779,9 +806,15 @@ halfText p {
     transform: translate3d(0,0,0);
     box-shadow: 5px 10px 10px;
     background-color: #08a564;
+    transition: 1s background-color ease-in;
     /* background-image: url(https://hdqwalls.com/download/polygonal-abstract-red-dark-background-eo-2048x1152.jpg); */
 }
 
+
+.preview-bar:hover
+{
+    background-color: rgb(116, 12, 12);
+}
 
 #preview-bar p
 {

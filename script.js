@@ -1,4 +1,3 @@
-var i = 0;
 var video = document.getElementById('video');
 var spinner = document.getElementById('spinner');
 var preloader = document.getElementById('overlay');
@@ -61,6 +60,7 @@ if(size.width < size.height)
     phone = false;
 // updateVideo();
 
+var gallaryImage = document.getElementById('gallaryImage');
 
 
 
@@ -109,11 +109,11 @@ function pauseStream()
         playAnyway = true;
 
     if (video.paused) {
-        playVideo();
+        video.play();
         buttonPress = false;
     }
     else {
-        pauseVideo();
+        video.pause();
         buttonPress = true;
     }
 }
@@ -153,7 +153,6 @@ block2.style.left = "15%";
 // block3.style.height = "25px";
 // block3.style.left = "200px";
 
-var i=0;
 
 var offset = window.scrollY;
 function parallex() {
@@ -178,36 +177,35 @@ window.addEventListener('scroll', parallex, false);
 function CheckVideo()
 {
     if(offset*2 > size.height && !playAnyway)
-        pauseVideo();
+        video.pause();
     else if(offset*2 < size.height  && !buttonPress)
     {
-        playVideo();
+        video.play();
         playAnyway = false;
     }
     else if(offset > size.height)
-        pauseVideo();
+        video.pause();
 }
 
 
 var newImage = false;
 var firstImage = true;
-var gallaryImage = document.getElementById('gallaryImage');
 var lastURL = "none";
 
-function imageUpdate(x) {
+function imageUpdate(image) {
     gallaryImage.classList.add("fadeOut-animation");
-    lastURL = "url('"+x.src+"')";
+    lastURL = "url('"+image.src+"')";
     if(newImage == false)
     {
-        if(firstImage == true)
-        {
-            fadeInImage();
-            firstImage = false;
-        }
-        else{
-            newImage = true;
-            setTimeout(fadeInImage, 1000);
-        }
+        // if(firstImage == true)
+        // {
+        //     setTimeout(fadeInImage, 1000);
+        //     firstImage = false;
+        // }
+        // else{
+        newImage = true;
+        setTimeout(fadeInImage, 1000);
+        // }
     }
 }
 
@@ -248,8 +246,9 @@ function imageDelete(x) {
 document.addEventListener('keydown', function(e){
     var key = e.keyCode ? e.keyCode : e.which;
     if(offset*2 < size.height)
-        if (key == 32)
-        {
+    if (key == 32)
+    {
+            video.focus();
             pauseStream();
             e.preventDefault();
         }
